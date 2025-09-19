@@ -38,7 +38,7 @@ kind: Service
 metadata:
   name: student-db-service
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: student-db
   ports:
@@ -84,7 +84,7 @@ kind: Service
 metadata:
   name: student-service
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: student
   ports:

@@ -57,7 +57,7 @@ kind: Service
 metadata:
   name: coe-db-service
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: coe-db
   ports:
@@ -104,7 +104,7 @@ kind: Service
 metadata:
   name: coe-incubation-db-service
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: coe-incubation-db
   ports:
@@ -167,7 +167,7 @@ kind: Service
 metadata:
   name: coe-service
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: coe
   ports:
