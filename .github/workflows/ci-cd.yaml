@@ -13,9 +13,6 @@ jobs:
     # 📂 Checkout repository
     - name: Checkout repository
       uses: actions/checkout@v4
-      with:
-        submodules: recursive
-        token: ${{ secrets.GITHUB_TOKEN }}
 
     # 🔑 Docker Hub login
     - name: Log in to Docker Hub
