@@ -23,26 +23,26 @@ jobs:
     # 🐳 Build & push COE API image
     - name: Build and push COE API
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/coe-api:latest ./COE_Api
-        docker push ${{ secrets.DOCKER_USERNAME }}/coe-api:latest
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/coe_api:latest ./COE_Api
+        docker push ${{ secrets.DOCKER_USERNAME }}/coe_api:latest
 
     # 🐳 Build & push Incubation Backend image
     - name: Build and push Incubation Backend
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/coe-backend:latest ./Incubation_Backend
-        docker push ${{ secrets.DOCKER_USERNAME }}/coe-backend:latest
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/coe_incubation_api:v2 ./Incubation_Backend
+        docker push ${{ secrets.DOCKER_USERNAME }}/coe_incubation_api:v2
 
     # 🐳 Build & push Project Management Service
     - name: Build and push Project Management Service
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/project-service:latest ./Project-Management-ims
-        docker push ${{ secrets.DOCKER_USERNAME }}/project-service:latest
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/project_api:latest ./Project-Management-ims
+        docker push ${{ secrets.DOCKER_USERNAME }}/project_api:latest
 
     # 🐳 Build & push Student Service
     - name: Build and push Student Service
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/student-service:latest ./student_management
-        docker push ${{ secrets.DOCKER_USERNAME }}/student-service:latest
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/student_api:latest ./student_management
+        docker push ${{ secrets.DOCKER_USERNAME }}/student_api:latest
 
     # ☁️ AWS credentials
     - name: Configure AWS credentials
