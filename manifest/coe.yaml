@@ -1,0 +1,175 @@
+# COE Init SQL ConfigMap
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: coe-init-sql
+data:
+  init_db.sql: |
+    -- put your init SQL statements here
+    CREATE TABLE IF NOT EXISTS test_table (
+      id SERIAL PRIMARY KEY,
+      name TEXT
+    );
+---
+# COE Postgres Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coe-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: coe-db
+  template:
+    metadata:
+      labels:
+        app: coe-db
+    spec:
+      containers:
+      - name: coe-db
+        image: postgres:15-alpine
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRES_DB
+          value: blogpost_db
+        - name: POSTGRES_USER
+          value: postgres
+        - name: POSTGRES_PASSWORD
+          value: rishi1023
+        volumeMounts:
+        - name: postgres-data
+          mountPath: /var/lib/postgresql/data
+        - name: init-sql
+          mountPath: /docker-entrypoint-initdb.d/init_db.sql
+          subPath: init_db.sql
+      volumes:
+      - name: postgres-data
+        emptyDir: {}
+      - name: init-sql
+        configMap:
+          name: coe-init-sql
+---
+# COE DB Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: coe-db-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: coe-db
+  ports:
+    - port: 5432
+      targetPort: 5432
+---
+# COE Incubation Postgres Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coe-incubation-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: coe-incubation-db
+  template:
+    metadata:
+      labels:
+        app: coe-incubation-db
+    spec:
+      containers:
+      - name: coe-incubation-db
+        image: postgres:15
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRES_DB
+          value: event_calendar
+        - name: POSTGRES_USER
+          value: postgres
+        - name: POSTGRES_PASSWORD
+          value: postgres
+        volumeMounts:
+        - name: postgres-data
+          mountPath: /var/lib/postgresql/data
+      volumes:
+      - name: postgres-data
+        emptyDir: {}
+---
+# COE Incubation DB Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: coe-incubation-db-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: coe-incubation-db
+  ports:
+    - port: 5432
+      targetPort: 5432
+---
+# COE API Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coe-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: coe
+  template:
+    metadata:
+      labels:
+        app: coe
+    spec:
+      containers:
+      - name: coe-api
+        image: priya0572/coe_api:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DB_HOST
+          value: coe-db-service
+        - name: DB_PORT
+          value: "5432"
+        - name: DB_NAME
+          value: blogpost_db
+        - name: DB_USER
+          value: postgres
+        - name: DB_PASSWORD
+          value: rishi1023
+      - name: coe-incubation
+        image: priya0572/coe_incubation_api:v2
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8001
+        command: ["uvicorn", "event_calendar.main:app", "--host", "0.0.0.0", "--port", "8001"]
+        env:
+        - name: DB_HOST
+          value: coe-incubation-db-service
+        - name: DB_PORT
+          value: "5432"
+        - name: DB_NAME
+          value: event_calendar
+        - name: DB_USER
+          value: postgres
+        - name: DB_PASSWORD
+          value: postgres
+---
+# COE Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: coe-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: coe
+  ports:
+    - port: 5000
+      targetPort: 8000

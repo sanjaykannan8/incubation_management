@@ -1,0 +1,92 @@
+# Project DB Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: project-db
+  template:
+    metadata:
+      labels:
+        app: project-db
+    spec:
+      containers:
+      - name: project-db
+        image: postgres:15
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRES_DB
+          value: projectmanagement
+        - name: POSTGRES_USER
+          value: imsadmin
+        - name: POSTGRES_PASSWORD
+          value: howareyou
+        volumeMounts:
+        - name: postgres-data
+          mountPath: /var/lib/postgresql/data
+      volumes:
+      - name: postgres-data
+        emptyDir: {}
+---
+# Project DB Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: project-db-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: project-db
+  ports:
+    - port: 5432
+      targetPort: 5432
+---
+# Project API Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: project
+  template:
+    metadata:
+      labels:
+        app: project
+    spec:
+      containers:
+      - name: project-api
+        image: priya0572/project_api:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DB_HOST
+          value: project-db-service
+        - name: DB_PORT
+          value: "5432"
+        - name: DB_NAME
+          value: projectmanagement
+        - name: DB_USER
+          value: imsadmin
+        - name: DB_PASSWORD
+          value: howareyou
+---
+# Project Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: project-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: project
+  ports:
+    - port: 5002
+      targetPort: 8000

@@ -1,0 +1,92 @@
+# Student DB Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: student-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: student-db
+  template:
+    metadata:
+      labels:
+        app: student-db
+    spec:
+      containers:
+      - name: student-db
+        image: postgres:15
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRES_DB
+          value: studentmanagement
+        - name: POSTGRES_USER
+          value: postgres
+        - name: POSTGRES_PASSWORD
+          value: Priya@0572
+        volumeMounts:
+        - name: postgres-data
+          mountPath: /var/lib/postgresql/data
+      volumes:
+      - name: postgres-data
+        emptyDir: {}
+---
+# Student DB Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: student-db-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: student-db
+  ports:
+    - port: 5432
+      targetPort: 5432
+---
+# Student API Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: student-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: student
+  template:
+    metadata:
+      labels:
+        app: student
+    spec:
+      containers:
+      - name: student-api
+        image: priya0572/student_api:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DATABASE_HOST
+          value: student-db-service
+        - name: DATABASE_PORT
+          value: "5432"
+        - name: DATABASE_NAME
+          value: studentmanagement
+        - name: DATABASE_USER
+          value: postgres
+        - name: DATABASE_PASSWORD
+          value: Priya@0572
+---
+# Student Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: student-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: student
+  ports:
+    - port: 5001
+      targetPort: 8000
