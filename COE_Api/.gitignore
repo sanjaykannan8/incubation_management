@@ -1,0 +1,61 @@
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# ==========================
+# Logs
+# ==========================
+*.log
+logs/
+!logs/.gitkeep  # keep folder but not logs
+
+# ==========================
+# IDE / Editor
+# ==========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==========================
+# OS files
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# Docker
+# ==========================
+*.pid
+*.seed
+*.bak
+
+# ==========================
+# Others
+# ==========================
+# Backup & temp
+*.tmp
+*.bak
+*.old
+
+# ==========================
+# Custom
+# ==========================
+# Ignore environment variables
+.env.example

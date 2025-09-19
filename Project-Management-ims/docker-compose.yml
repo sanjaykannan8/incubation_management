@@ -1,0 +1,32 @@
+services:
+    backend:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "0.0.0.0:8000:8000"
+        environment:
+            - DB_HOST=database
+            - DB_NAME=projectmanagement
+            - DB_USER=imsadmin
+            - DB_PASSWORD=howareyou
+            - DB_PORT=5432
+        depends_on:
+            - database
+        restart: unless-stopped
+        
+    database:
+        image: postgres:15
+        ports:
+            - "5432:5432"
+        environment:
+            - POSTGRES_USER=imsadmin
+            - POSTGRES_PASSWORD=howareyou
+            - POSTGRES_DB=projectmanagement
+        volumes:
+            - postgres_data:/var/lib/postgresql/data
+        restart: unless-stopped
+
+volumes:
+    postgres_data:
+        driver: local
