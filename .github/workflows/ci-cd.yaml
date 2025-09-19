@@ -1,76 +1,188 @@
-name: CI/CD Pipeline for EKS Ser    # 🐳 Build & push COE API image
-    - name: Build and push COE API
-      run: |
-        if [ ! -f ./COE_Api/Dockerfile ]; then
-          echo "Dockerfile not found in COE_Api directory"
-          exit 1
-        fi
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/coe_api:latest ./COE_Api
-        docker push ${{ secrets.DOCKER_USERNAME }}/coe_api:latest
+name: CI/CD Pipeline for EKS Servicesname: CI/CD Pipeline for EKS Services
 
-on:
-  push:
-    branches:
-      - main   # Trigger workflow on push to main branch
 
-jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout repository
+on:on:
+
+  push:  push:
+
+    branches:    branches:
+
+      - main   # Trigger workflow on push to main branch      - main   # Trigger workflow on push to main branch
+
+
+
+jobs:jobs:
+
+  build-deploy:  build-deploy:
+
+    runs-on: ubuntu-latest    runs-on: ubuntu-latest
+
+
+
+    steps:    steps:
+
+    - name: Checkout repository    - name: Checkout repository
+
+      uses: actions/checkout@v4      uses: actions/checkout@v4
+
+
+
+    # 🔑 Docker Hub login    # � Docker Hub login
+
+    - name: Log in to Docker Hub    - name: Log in to Docker Hub
+
+      uses: docker/login-action@v3      uses: docker/login-action@v3
+
+      with:      with:
+
+        username: ${{ secrets.DOCKER_USERNAME }}        username: ${{ secrets.DOCKER_USERNAME }}
+
+        password: ${{ secrets.DOCKER_PASSWORD }}        password: ${{ secrets.DOCKER_PASSWORD }}
+
+
+
+    # 🔍 Debug: List repository structure    # 🔍 Debug: List repository structure
+
+    - name: List repository structure    - name: List repository structure
+
+      run: |      run: |
+
+        echo "Repository root contents:"        echo "Repository root contents:"
+
+        ls -la        ls -la
+
+        echo "COE_Api contents:"        echo "COE_Api contents:"
+
+        ls -la COE_Api/ || echo "COE_Api directory not found"        ls -la COE_Api/ || echo "COE_Api directory not found"
+
+        echo "Incubation_Backend contents:"        echo "Incubation_Backend contents:"
+
+        ls -la Incubation_Backend/ || echo "Incubation_Backend directory not found"        ls -la Incubation_Backend/ || echo "Incubation_Backend directory not found"
+
+
+
+    # 🐳 Build & push COE API image    # �🐳 Build & push COE API image
+
+    - name: Build and push COE API    - name: Build and push COE API
+
+      run: |      run: |
+
+        if [ ! -f ./COE_Api/Dockerfile ]; then        if [ ! -f ./COE_Api/Dockerfile ]; then
+
+          echo "Dockerfile not found in COE_Api directory"          echo "Dockerfile not found in COE_Api directory"
+
+          exit 1          exit 1
+
+        fi        fi
+
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/coe_api:latest ./COE_Api        docker build -t ${{ secrets.DOCKER_USERNAME }}/coe_api:latest ./COE_Api
+
+        docker push ${{ secrets.DOCKER_USERNAME }}/coe_api:latest        docker push ${{ secrets.DOCKER_USERNAME }}/coe_api:latest
+
       uses: actions/checkout@v4
 
-    # 🔑 Docker Hub login
-    - name: Log in to Docker Hub
-      uses: docker/login-action@v3
-      with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
-
-    # � Debug: List repository structure
-    - name: List repository structure
-      run: |
-        echo "Repository root contents:"
-        ls -la
-        echo "COE_Api contents:"
-        ls -la COE_Api/ || echo "COE_Api directory not found"
-        echo "Incubation_Backend contents:"
-        ls -la Incubation_Backend/ || echo "Incubation_Backend directory not found"
-
-    # �🐳 Build & push COE API image
-    - name: Build and push COE API
-      run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/coe_api:latest ./COE_Api
-        docker push ${{ secrets.DOCKER_USERNAME }}/coe_api:latest
-
     # 🐳 Build & push Incubation Backend image
-    - name: Build and push Incubation Backend
-      run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/coe_incubation_api:latest ./Incubation_Backend
-        docker push ${{ secrets.DOCKER_USERNAME }}/coe_incubation_api:latest
 
-    # 🐳 Build & push Project Management Service
+    - name: Build and push Incubation Backend    # 🔑 Docker Hub login
+
+      run: |    - name: Log in to Docker Hub
+
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/coe_incubation_api:latest ./Incubation_Backend      uses: docker/login-action@v3
+
+        docker push ${{ secrets.DOCKER_USERNAME }}/coe_incubation_api:latest      with:
+
+        username: ${{ secrets.DOCKER_USERNAME }}
+
+    # 🐳 Build & push Project Management Service        password: ${{ secrets.DOCKER_PASSWORD }}
+
     - name: Build and push Project Management Service
-      run: |
+
+      run: |    # � Debug: List repository structure
+
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/project_api:latest ./Project-Management-ims    - name: List repository structure
+
+        docker push ${{ secrets.DOCKER_USERNAME }}/project_api:latest      run: |
+
+        echo "Repository root contents:"
+
+    # 🐳 Build & push Student Service        ls -la
+
+    - name: Build and push Student Service        echo "COE_Api contents:"
+
+      run: |        ls -la COE_Api/ || echo "COE_Api directory not found"
+
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/student_api:latest ./student_management/backend        echo "Incubation_Backend contents:"
+
+        docker push ${{ secrets.DOCKER_USERNAME }}/student_api:latest        ls -la Incubation_Backend/ || echo "Incubation_Backend directory not found"
+
+
+
+    # ☁️ AWS credentials    # �🐳 Build & push COE API image
+
+    - name: Configure AWS credentials    - name: Build and push COE API
+
+      uses: aws-actions/configure-aws-credentials@v4      run: |
+
+      with:        docker build -t ${{ secrets.DOCKER_USERNAME }}/coe_api:latest ./COE_Api
+
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}        docker push ${{ secrets.DOCKER_USERNAME }}/coe_api:latest
+
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+        aws-region: ${{ secrets.AWS_REGION }}    # 🐳 Build & push Incubation Backend image
+
+    - name: Build and push Incubation Backend
+
+    # 🔗 Update kubeconfig for EKS      run: |
+
+    - name: Update kubeconfig        docker build -t ${{ secrets.DOCKER_USERNAME }}/coe_incubation_api:latest ./Incubation_Backend
+
+      run: aws eks update-kubeconfig --name ${{ secrets.EKS_CLUSTER_NAME }}        docker push ${{ secrets.DOCKER_USERNAME }}/coe_incubation_api:latest
+
+
+
+    # 🚀 Deploy services to Kubernetes    # 🐳 Build & push Project Management Service
+
+    - name: Deploy COE Service (API + Backend)    - name: Build and push Project Management Service
+
+      run: kubectl apply -f kubernetes/coe.yaml      run: |
+
         docker build -t ${{ secrets.DOCKER_USERNAME }}/project_api:latest ./Project-Management-ims
-        docker push ${{ secrets.DOCKER_USERNAME }}/project_api:latest
+
+    - name: Deploy Project Service        docker push ${{ secrets.DOCKER_USERNAME }}/project_api:latest
+
+      run: kubectl apply -f kubernetes/project.yaml
 
     # 🐳 Build & push Student Service
-    - name: Build and push Student Service
-      run: |
+
+    - name: Deploy Student Service    - name: Build and push Student Service
+
+      run: kubectl apply -f kubernetes/student.yaml      run: |
+
         docker build -t ${{ secrets.DOCKER_USERNAME }}/student_api:latest ./student_management/backend
-        docker push ${{ secrets.DOCKER_USERNAME }}/student_api:latest
 
-    # ☁️ AWS credentials
-    - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v4
-      with:
+    # ✅ Verify deployments        docker push ${{ secrets.DOCKER_USERNAME }}/student_api:latest
+
+    - name: Wait for deployments to be ready
+
+      run: |    # ☁️ AWS credentials
+
+        kubectl rollout status deployment/coe-api-deployment --timeout=300s    - name: Configure AWS credentials
+
+        kubectl rollout status deployment/project-api-deployment --timeout=300s      uses: aws-actions/configure-aws-credentials@v4
+
+        kubectl rollout status deployment/student-api-deployment --timeout=300s      with:
+
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ${{ secrets.AWS_REGION }}
 
-    # 🔗 Update kubeconfig for EKS
+    - name: Get deployment status        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      run: |        aws-region: ${{ secrets.AWS_REGION }}
+
+        kubectl get pods
+
+        kubectl get services    # 🔗 Update kubeconfig for EKS
     - name: Update kubeconfig
       run: aws eks update-kubeconfig --name ${{ secrets.EKS_CLUSTER_NAME }}
 
