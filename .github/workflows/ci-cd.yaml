@@ -13,6 +13,9 @@ jobs:
     # 📂 Checkout repository
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     # 🔑 Docker Hub login
     - name: Log in to Docker Hub
@@ -21,9 +24,37 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
+    # 🔍 Debug: Check repository structure
+    - name: Debug repository structure
+      run: |
+        echo "=== Repository root contents ==="
+        ls -la
+        echo "=== COE_Api directory ==="
+        if [ -d "COE_Api" ]; then
+          ls -la COE_Api/
+          echo "Dockerfile exists: $([ -f COE_Api/Dockerfile ] && echo 'YES' || echo 'NO')"
+        else
+          echo "COE_Api directory not found!"
+        fi
+        echo "=== Incubation_Backend directory ==="
+        if [ -d "Incubation_Backend" ]; then
+          ls -la Incubation_Backend/
+        else
+          echo "Incubation_Backend directory not found!"
+        fi
+
     # 🐳 Build & push COE API image
     - name: Build and push COE API
       run: |
+        if [ ! -d "./COE_Api" ]; then
+          echo "❌ COE_Api directory not found!"
+          exit 1
+        fi
+        if [ ! -f "./COE_Api/Dockerfile" ]; then
+          echo "❌ Dockerfile not found in COE_Api directory!"
+          exit 1
+        fi
+        echo "✅ Building COE API..."
         docker build -t ${{ secrets.DOCKER_USERNAME }}/coe_api:latest ./COE_Api
         docker push ${{ secrets.DOCKER_USERNAME }}/coe_api:latest
 
