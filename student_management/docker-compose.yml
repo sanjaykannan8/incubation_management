@@ -1,0 +1,51 @@
+services:
+  # PostgreSQL Database
+  student_db:
+    image: postgres:15
+    container_name: student_management_db
+    environment:
+      POSTGRES_DB: studentmanagement
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Priya@0572
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - student_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # FastAPI Application
+  fastapi:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: student_management_api
+    environment:
+      DATABASE_HOST: student_db
+      DATABASE_PORT: 5432
+      DATABASE_NAME: studentmanagement
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: Priya@0572
+    ports:
+      - "0.0.0.0:8000:8000"
+    depends_on:
+      student_db:
+        condition: service_healthy
+    networks:
+      - student_network
+    volumes:
+      - ./backend:/app
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  student_network:
+    driver: bridge

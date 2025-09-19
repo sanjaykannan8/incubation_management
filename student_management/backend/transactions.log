@@ -1,0 +1,1247 @@
+2025-08-26 13:44:06,328 - INFO - root - New Request: GET http://127.0.0.1:8000/ 127.0.0.1 60594
+2025-08-26 13:44:06,330 - INFO - root - Completed: GET http://127.0.0.1:8000/ - Body:  - Status: 200 - Time: 2.40ms
+2025-08-26 13:44:06,432 - INFO - root - New Request: GET http://127.0.0.1:8000/favicon.ico 127.0.0.1 60594
+2025-08-26 13:44:06,435 - INFO - root - Completed: GET http://127.0.0.1:8000/favicon.ico - Body:  - Status: 200 - Time: 2.60ms
+2025-08-26 13:44:13,913 - INFO - root - New Request: GET http://127.0.0.1:8000/docs 127.0.0.1 60593
+2025-08-26 13:44:13,914 - INFO - root - Completed: GET http://127.0.0.1:8000/docs - Body:  - Status: 200 - Time: 0.84ms
+2025-08-26 13:44:15,371 - INFO - root - New Request: GET http://127.0.0.1:8000/openapi.json 127.0.0.1 60593
+2025-08-26 13:44:15,395 - INFO - root - Completed: GET http://127.0.0.1:8000/openapi.json - Body:  - Status: 200 - Time: 24.61ms
+2025-08-26 14:10:10,821 - INFO - root - New Request: POST http://localhost:8000/students/register 127.0.0.1 53897
+2025-08-26 14:10:10,825 - INFO - main - Registering student: string
+2025-08-26 14:10:10,939 - INFO - main - Student registered successfully: string, id: 1981
+2025-08-26 14:10:10,940 - INFO - root - Completed: POST http://localhost:8000/students/register - Body: {
+  "id": 1981,
+  "email": "string",
+  "password_hash": "string",
+  "full_name": "string",
+  "phone"... - Status: 200 - Time: 119.35ms
+2025-08-26 14:11:49,736 - INFO - root - New Request: POST http://localhost:8000/students/register 127.0.0.1 53953
+2025-08-26 14:11:49,737 - INFO - main - Registering student: string
+2025-08-26 14:11:49,813 - ERROR - main - Error registering student string: duplicate key value violates unique constraint "students_pkey"
+DETAIL:  Key (id)=(1981) already exists.
+
+2025-08-26 14:11:49,814 - INFO - root - Completed: POST http://localhost:8000/students/register - Body: {
+  "id": 1981,
+  "email": "string",
+  "password_hash": "string",
+  "full_name": "string",
+  "phone"... - Status: 400 - Time: 78.00ms
+2025-08-26 14:12:41,517 - INFO - root - New Request: POST http://localhost:8000/students/register 127.0.0.1 53976
+2025-08-26 14:12:41,518 - INFO - main - Registering student: string
+2025-08-26 14:12:41,582 - ERROR - main - Error registering student string: duplicate key value violates unique constraint "students_email_key"
+DETAIL:  Key (email)=(string) already exists.
+
+2025-08-26 14:12:41,583 - INFO - root - Completed: POST http://localhost:8000/students/register - Body: {
+  "id": 191,
+  "email": "string",
+  "password_hash": "string",
+  "full_name": "string",
+  "phone":... - Status: 400 - Time: 65.34ms
+2025-08-26 14:12:48,738 - INFO - root - New Request: POST http://localhost:8000/students/register 127.0.0.1 53982
+2025-08-26 14:12:48,739 - INFO - main - Registering student: strng
+2025-08-26 14:12:48,780 - INFO - main - Student registered successfully: strng, id: 191
+2025-08-26 14:12:48,780 - INFO - root - Completed: POST http://localhost:8000/students/register - Body: {
+  "id": 191,
+  "email": "strng",
+  "password_hash": "string",
+  "full_name": "string",
+  "phone": ... - Status: 200 - Time: 41.99ms
+2025-08-26 14:12:59,085 - INFO - root - New Request: GET http://localhost:8000/students/6890 127.0.0.1 53989
+2025-08-26 14:12:59,139 - INFO - root - Completed: GET http://localhost:8000/students/6890 - Body:  - Status: 404 - Time: 54.42ms
+2025-08-26 14:13:10,726 - INFO - root - New Request: GET http://localhost:8000/students/:191 127.0.0.1 53996
+2025-08-26 14:13:10,732 - INFO - root - Completed: GET http://localhost:8000/students/:191 - Body:  - Status: 422 - Time: 5.48ms
+2025-08-26 14:13:16,497 - INFO - root - New Request: GET http://localhost:8000/students/191 127.0.0.1 54003
+2025-08-26 14:13:16,558 - INFO - root - Completed: GET http://localhost:8000/students/191 - Body:  - Status: 200 - Time: 61.36ms
+2025-08-29 00:39:01,866 - INFO - root - New Request: GET http://localhost:8000/docs 172.18.0.1 40070
+2025-08-29 00:39:01,874 - INFO - root - Completed: GET http://localhost:8000/docs - Body:  - Status: 200 - Time: 9.56ms
+2025-08-29 00:39:06,343 - INFO - root - New Request: GET http://localhost:8000/openapi.json 172.18.0.1 40070
+2025-08-29 00:39:06,369 - INFO - root - Completed: GET http://localhost:8000/openapi.json - Body:  - Status: 200 - Time: 25.79ms
+2025-08-29 00:40:00,406 - INFO - root - New Request: POST http://localhost:8000/students/register 172.18.0.1 40060
+2025-08-29 00:40:00,410 - INFO - main - Registering student: venkipriya@gmail.com
+2025-08-29 00:40:00,461 - INFO - main - Student registered successfully: venkipriya@gmail.com, id: 2
+2025-08-29 00:40:00,750 - INFO - root - Completed: POST http://localhost:8000/students/register - Body: {
+  "id": 2,
+  "email": "venkipriya@gmail.com",
+  "password_hash": "priya@1234",
+  "full_name": "Pri... - Status: 200 - Time: 343.70ms
+2025-08-29 07:03:58,703 - INFO - root - New Request: GET http://localhost:8000/docs?id=88aa0a03-135e-4abf-97df-78379e21bbd8&vscodeBrowserReqId=1756451038673 172.18.0.1 33328
+2025-08-29 07:03:58,705 - INFO - root - Completed: GET http://localhost:8000/docs?id=88aa0a03-135e-4abf-97df-78379e21bbd8&vscodeBrowserReqId=1756451038673 - Body:  - Status: 200 - Time: 1.57ms
+2025-08-29 07:03:59,163 - INFO - root - New Request: GET http://localhost:8000/openapi.json 172.18.0.1 33328
+2025-08-29 07:03:59,198 - INFO - root - Completed: GET http://localhost:8000/openapi.json - Body:  - Status: 200 - Time: 34.86ms
+2025-08-29 07:08:38,745 - INFO - root - New Request: GET http://localhost:8000/docs?id=5070ccc5-999e-49d0-88f3-bd9d0c3ab8bc&vscodeBrowserReqId=1756451318713 172.18.0.1 59250
+2025-08-29 07:08:38,747 - INFO - root - Completed: GET http://localhost:8000/docs?id=5070ccc5-999e-49d0-88f3-bd9d0c3ab8bc&vscodeBrowserReqId=1756451318713 - Body:  - Status: 200 - Time: 2.11ms
+2025-08-29 07:08:38,928 - INFO - root - New Request: GET http://localhost:8000/openapi.json 172.18.0.1 59250
+2025-08-29 07:08:38,964 - INFO - root - Completed: GET http://localhost:8000/openapi.json - Body:  - Status: 200 - Time: 35.71ms
+2025-08-29 07:09:07,593 - INFO - root - New Request: GET http://localhost:8000/docs 172.18.0.1 51138
+2025-08-29 07:09:07,595 - INFO - root - Completed: GET http://localhost:8000/docs - Body:  - Status: 200 - Time: 1.55ms
+2025-08-29 07:09:08,053 - INFO - root - New Request: GET http://localhost:8000/openapi.json 172.18.0.1 51138
+2025-08-29 07:09:08,054 - INFO - root - Completed: GET http://localhost:8000/openapi.json - Body:  - Status: 200 - Time: 1.23ms
+2025-08-29 07:10:36,128 - INFO - root - New Request: POST http://localhost:8000/students/register 172.18.0.1 53846
+2025-08-29 07:10:36,132 - INFO - main - Registering student: priya123@gmail.com
+2025-08-29 07:10:36,167 - INFO - main - Student registered successfully: priya123@gmail.com, id: 3
+2025-08-29 07:10:36,168 - INFO - root - Completed: POST http://localhost:8000/students/register - Body: {
+  "id": 3,
+  "email": "priya123@gmail.com",
+  "password_hash": "priya@1234",
+  "full_name": "Priya... - Status: 200 - Time: 39.76ms
+2025-08-29 07:12:58,739 - INFO - root - New Request: GET http://localhost:8000/docs 172.18.0.1 39996
+2025-08-29 07:12:58,741 - INFO - root - Completed: GET http://localhost:8000/docs - Body:  - Status: 200 - Time: 1.41ms
+2025-08-29 07:12:58,976 - INFO - root - New Request: GET http://localhost:8000/openapi.json 172.18.0.1 39996
+2025-08-29 07:12:58,978 - INFO - root - Completed: GET http://localhost:8000/openapi.json - Body:  - Status: 200 - Time: 2.71ms
+2025-08-29 07:29:37,975 - INFO - root - New Request: GET http://localhost:8000/docs 172.18.0.1 50072
+2025-08-29 07:29:37,976 - INFO - root - Completed: GET http://localhost:8000/docs - Body:  - Status: 200 - Time: 1.53ms
+2025-08-29 07:29:38,206 - INFO - root - New Request: GET http://localhost:8000/openapi.json 172.18.0.1 50072
+2025-08-29 07:29:38,209 - INFO - root - Completed: GET http://localhost:8000/openapi.json - Body:  - Status: 200 - Time: 3.14ms
+2025-08-29 07:30:06,221 - INFO - root - New Request: GET http://localhost:8000/students/2 172.18.0.1 50056
+2025-08-29 07:30:06,264 - INFO - root - Completed: GET http://localhost:8000/students/2 - Body:  - Status: 200 - Time: 42.34ms
+2025-08-29 09:22:53,737 - INFO - root - New Request: GET http://172.16.126.138:8000/ 172.18.0.1 56354
+2025-08-29 09:22:53,741 - INFO - root - Completed: GET http://172.16.126.138:8000/ - Body:  - Status: 200 - Time: 3.95ms
+2025-08-29 09:22:53,904 - INFO - root - New Request: GET http://172.16.126.138:8000/favicon.ico 172.18.0.1 56354
+2025-08-29 09:22:53,905 - INFO - root - Completed: GET http://172.16.126.138:8000/favicon.ico - Body:  - Status: 404 - Time: 1.38ms
+2025-08-29 09:23:14,829 - INFO - root - New Request: GET http://172.16.126.138:8000/docs 172.18.0.1 56362
+2025-08-29 09:23:14,830 - INFO - root - Completed: GET http://172.16.126.138:8000/docs - Body:  - Status: 200 - Time: 1.49ms
+2025-08-29 09:23:15,531 - INFO - root - New Request: GET http://172.16.126.138:8000/openapi.json 172.18.0.1 56362
+2025-08-29 09:23:15,561 - INFO - root - Completed: GET http://172.16.126.138:8000/openapi.json - Body:  - Status: 200 - Time: 30.15ms
+2025-08-29 09:39:30,918 - INFO - root - New Request: GET http://172.16.126.138:8000/docs 172.18.0.1 47242
+2025-08-29 09:39:30,922 - INFO - root - Completed: GET http://172.16.126.138:8000/docs - Body:  - Status: 200 - Time: 3.49ms
+2025-08-29 09:39:31,298 - INFO - root - New Request: GET http://172.16.126.138:8000/openapi.json 172.18.0.1 47242
+2025-08-29 09:39:31,299 - INFO - root - Completed: GET http://172.16.126.138:8000/openapi.json - Body:  - Status: 200 - Time: 1.53ms
+2025-09-02 21:08:25,849 - INFO - root - New Request: GET http://localhost:8000/docs 127.0.0.1 58579
+2025-09-02 21:08:25,851 - INFO - root - Completed: GET http://localhost:8000/docs - Body:  - Status: 200 - Time: 2.05ms
+2025-09-02 21:08:26,241 - INFO - root - New Request: GET http://localhost:8000/openapi.json 127.0.0.1 58579
+2025-09-02 21:08:26,257 - INFO - root - Completed: GET http://localhost:8000/openapi.json - Body:  - Status: 200 - Time: 15.93ms
+2025-09-03 14:13:13,558 - INFO - root - New Request: GET http://localhost:8000/students/ 127.0.0.1 62178
+2025-09-03 14:13:13,560 - INFO - root - Completed: GET http://localhost:8000/students/ - Body:  - Status: 404 - Time: 1.45ms
+2025-09-03 14:13:58,492 - INFO - root - New Request: GET http://localhost:8000/students/ 127.0.0.1 50910
+2025-09-03 14:13:58,493 - INFO - root - Completed: GET http://localhost:8000/students/ - Body:  - Status: 404 - Time: 0.92ms
+2025-09-03 14:14:14,402 - INFO - root - New Request: GET http://localhost:8000/students/ 127.0.0.1 50383
+2025-09-03 14:14:14,403 - INFO - root - Completed: GET http://localhost:8000/students/ - Body:  - Status: 404 - Time: 1.56ms
+2025-09-03 14:14:18,378 - INFO - root - New Request: GET http://localhost:8000/courses/ 127.0.0.1 50383
+2025-09-03 14:14:18,378 - INFO - root - New Request: GET http://localhost:8000/students/ 127.0.0.1 52416
+2025-09-03 14:14:18,379 - INFO - root - Completed: GET http://localhost:8000/courses/ - Body:  - Status: 404 - Time: 1.43ms
+2025-09-03 14:14:18,380 - INFO - root - Completed: GET http://localhost:8000/students/ - Body:  - Status: 404 - Time: 1.41ms
+2025-09-03 14:14:18,381 - INFO - root - New Request: GET http://localhost:8000/courses/ 127.0.0.1 50383
+2025-09-03 14:14:18,382 - INFO - root - New Request: GET http://localhost:8000/students/ 127.0.0.1 52416
+2025-09-03 14:14:18,383 - INFO - root - Completed: GET http://localhost:8000/courses/ - Body:  - Status: 404 - Time: 1.49ms
+2025-09-03 14:14:18,384 - INFO - root - Completed: GET http://localhost:8000/students/ - Body:  - Status: 404 - Time: 1.81ms
+2025-09-03 14:14:27,458 - INFO - root - New Request: GET http://localhost:8000/students/ 127.0.0.1 56786
+2025-09-03 14:14:27,458 - INFO - root - Completed: GET http://localhost:8000/students/ - Body:  - Status: 404 - Time: 0.76ms
+2025-09-03 14:14:27,461 - INFO - root - New Request: GET http://localhost:8000/students/ 127.0.0.1 56786
+2025-09-03 14:14:27,462 - INFO - root - Completed: GET http://localhost:8000/students/ - Body:  - Status: 404 - Time: 0.95ms
+2025-09-03 14:14:30,315 - INFO - root - New Request: GET http://localhost:8000/students/ 127.0.0.1 56786
+2025-09-03 14:14:30,318 - INFO - root - Completed: GET http://localhost:8000/students/ - Body:  - Status: 404 - Time: 2.39ms
+2025-09-03 14:14:31,016 - INFO - root - New Request: GET http://localhost:8000/students/ 127.0.0.1 56786
+2025-09-03 14:14:31,018 - INFO - root - Completed: GET http://localhost:8000/students/ - Body:  - Status: 404 - Time: 1.22ms
+2025-09-03 14:14:31,188 - INFO - root - New Request: GET http://localhost:8000/students/ 127.0.0.1 56786
+2025-09-03 14:14:31,190 - INFO - root - Completed: GET http://localhost:8000/students/ - Body:  - Status: 404 - Time: 1.65ms
+2025-09-03 14:14:31,416 - INFO - root - New Request: GET http://localhost:8000/students/ 127.0.0.1 56786
+2025-09-03 14:14:31,417 - INFO - root - Completed: GET http://localhost:8000/students/ - Body:  - Status: 404 - Time: 1.02ms
+2025-09-03 14:15:25,063 - INFO - root - New Request: GET http://localhost:8000/docs?id=c2fdcbeb-1936-4ed4-a318-7476d6411e22&vscodeBrowserReqId=1756889124755 127.0.0.1 64062
+2025-09-03 14:15:25,065 - INFO - root - Completed: GET http://localhost:8000/docs?id=c2fdcbeb-1936-4ed4-a318-7476d6411e22&vscodeBrowserReqId=1756889124755 - Body:  - Status: 200 - Time: 1.59ms
+2025-09-03 14:15:25,445 - INFO - root - New Request: GET http://localhost:8000/openapi.json 127.0.0.1 64062
+2025-09-03 14:15:25,459 - INFO - root - Completed: GET http://localhost:8000/openapi.json - Body:  - Status: 200 - Time: 14.19ms
+2025-09-03 14:16:37,118 - ERROR - main - Error creating simple tables: connection to server at "localhost" (::1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused (0x0000274D/10061)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2025-09-03 14:19:43,108 - INFO - root - New Request: GET http://localhost:8000/docs 127.0.0.1 62744
+2025-09-03 14:19:43,112 - INFO - root - Completed: GET http://localhost:8000/docs - Body:  - Status: 200 - Time: 3.34ms
+2025-09-03 14:19:43,984 - INFO - root - New Request: GET http://localhost:8000/openapi.json 127.0.0.1 53394
+2025-09-03 14:19:43,992 - INFO - root - Completed: GET http://localhost:8000/openapi.json - Body:  - Status: 200 - Time: 8.62ms
+2025-09-03 14:22:45,429 - INFO - main_sqlite - SQLite database initialized successfully!
+2025-09-03 14:23:09,147 - INFO - root - New Request: GET http://localhost:8000/students/?id=60af4441-71c9-4206-9a6e-d1ca469e68d3&vscodeBrowserReqId=1756889588821 127.0.0.1 54390
+2025-09-03 14:23:09,148 - INFO - root - Completed: GET http://localhost:8000/students/?id=60af4441-71c9-4206-9a6e-d1ca469e68d3&vscodeBrowserReqId=1756889588821 - Body:  - Status: 404 - Time: 0.75ms
+2025-09-03 14:23:38,637 - INFO - main_sqlite - SQLite database initialized successfully!
+2025-09-03 08:57:35,442 - INFO - root - New Request: GET http://localhost:8000/docs?id=564fd7eb-f5c9-416f-b975-a083a0c62e6b&vscodeBrowserReqId=1756889855124 172.18.0.1 47156
+2025-09-03 08:57:35,443 - INFO - root - Completed: GET http://localhost:8000/docs?id=564fd7eb-f5c9-416f-b975-a083a0c62e6b&vscodeBrowserReqId=1756889855124 - Body:  - Status: 200 - Time: 0.90ms
+2025-09-03 08:57:35,511 - INFO - root - New Request: GET http://localhost:8000/openapi.json 172.18.0.1 47156
+2025-09-03 08:57:35,524 - INFO - root - Completed: GET http://localhost:8000/openapi.json - Body:  - Status: 200 - Time: 13.03ms
+2025-09-03 08:58:23,261 - INFO - root - New Request: GET http://localhost:8000/docs?id=61bec2e1-d60e-46ae-b1f6-c1543a800b85&vscodeBrowserReqId=1756889903255 172.18.0.1 47166
+2025-09-03 08:58:23,262 - INFO - root - Completed: GET http://localhost:8000/docs?id=61bec2e1-d60e-46ae-b1f6-c1543a800b85&vscodeBrowserReqId=1756889903255 - Body:  - Status: 200 - Time: 1.27ms
+2025-09-03 08:58:23,408 - INFO - root - New Request: GET http://localhost:8000/openapi.json 172.18.0.1 47166
+2025-09-03 08:58:23,409 - INFO - root - Completed: GET http://localhost:8000/openapi.json - Body:  - Status: 200 - Time: 1.42ms
+2025-09-03 09:07:33,930 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 55378
+2025-09-03 09:07:34,050 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 55394
+2025-09-03 09:07:34,085 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 35.78ms
+2025-09-03 09:07:34,093 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 55394
+2025-09-03 09:07:34,179 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 55408
+2025-09-03 09:07:34,190 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 11.24ms
+2025-09-03 09:09:27,305 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 52448
+2025-09-03 09:09:27,316 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 52452
+2025-09-03 09:09:27,326 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 10.77ms
+2025-09-03 14:45:41,195 - INFO - root - New Request: GET http://localhost:8000/ 127.0.0.1 49587
+2025-09-03 14:45:41,196 - INFO - root - Completed: GET http://localhost:8000/ - Body:  - Status: 200 - Time: 0.86ms
+2025-09-03 14:59:04,918 - INFO - root - New Request: GET http://localhost:8000/ 127.0.0.1 58234
+2025-09-03 14:59:04,919 - INFO - root - Completed: GET http://localhost:8000/ - Body:  - Status: 200 - Time: 1.04ms
+2025-09-03 14:59:23,135 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 127.0.0.1 64690
+2025-09-03 14:59:33,381 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 127.0.0.1 63385
+2025-09-03 15:02:34,973 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 127.0.0.1 56208
+2025-09-03 15:03:17,923 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 127.0.0.1 55261
+2025-09-03 15:04:38,074 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 127.0.0.1 64610
+2025-09-03 15:06:41,335 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 127.0.0.1 59054
+2025-09-03 15:07:44,442 - INFO - root - New Request: GET http://localhost:8000/ 127.0.0.1 56615
+2025-09-03 15:07:44,443 - INFO - root - Completed: GET http://localhost:8000/ - Body:  - Status: 200 - Time: 0.84ms
+2025-09-03 15:07:57,517 - INFO - root - New Request: GET http://localhost:8000/ 127.0.0.1 57007
+2025-09-03 15:07:57,518 - INFO - root - Completed: GET http://localhost:8000/ - Body:  - Status: 200 - Time: 0.81ms
+2025-09-03 15:08:07,196 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 127.0.0.1 56423
+2025-09-03 15:08:19,633 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 127.0.0.1 58107
+2025-09-03 15:11:30,269 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 127.0.0.1 60195
+2025-09-03 15:12:53,859 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 127.0.0.1 53095
+2025-09-03 15:15:55,816 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 127.0.0.1 55976
+2025-09-03 15:17:41,417 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 127.0.0.1 53056
+2025-09-03 15:19:40,762 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 127.0.0.1 55725
+2025-09-03 15:21:12,038 - INFO - root - New Request: GET http://localhost:8000/test/db 127.0.0.1 57848
+2025-09-03 15:21:12,039 - INFO - root - Completed: GET http://localhost:8000/test/db - Body:  - Status: 404 - Time: 0.85ms
+2025-09-03 15:21:41,216 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 127.0.0.1 56501
+2025-09-03 15:23:43,302 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 127.0.0.1 59763
+2025-09-03 15:25:05,071 - INFO - root - New Request: GET http://localhost:8000/students/all 127.0.0.1 52664
+2025-09-03 15:25:05,076 - INFO - root - Completed: GET http://localhost:8000/students/all - Body:  - Status: 422 - Time: 4.86ms
+2025-09-03 15:25:13,048 - INFO - root - New Request: GET http://localhost:8000/students/all 127.0.0.1 58756
+2025-09-03 15:25:13,049 - INFO - root - Completed: GET http://localhost:8000/students/all - Body:  - Status: 422 - Time: 1.00ms
+2025-09-03 15:25:29,798 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 127.0.0.1 58763
+2025-09-03 15:25:29,822 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 24.37ms
+2025-09-03 15:28:01,786 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 127.0.0.1 64998
+2025-09-03 15:28:02,032 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 127.0.0.1 59105
+2025-09-03 15:28:02,055 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 22.59ms
+2025-09-03 09:59:40,545 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 35092
+2025-09-03 09:59:40,584 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 39.20ms
+2025-09-03 09:59:40,590 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 35092
+2025-09-03 09:59:40,598 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 7.43ms
+2025-09-03 09:59:47,836 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 35102
+2025-09-03 09:59:47,845 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 8.69ms
+2025-09-03 09:59:47,848 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 35102
+2025-09-03 09:59:47,856 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 7.98ms
+2025-09-03 10:00:31,048 - INFO - root - New Request: OPTIONS http://localhost:8000/students/register 172.18.0.1 45394
+2025-09-03 10:00:31,049 - INFO - root - Completed: OPTIONS http://localhost:8000/students/register - Body:  - Status: 200 - Time: 0.72ms
+2025-09-03 10:00:31,052 - INFO - root - New Request: POST http://localhost:8000/students/register 172.18.0.1 45394
+2025-09-03 10:00:31,053 - INFO - main - Registering student: sec23cs023@sairamtap.edu.in
+2025-09-03 10:00:31,065 - INFO - main - Student registered successfully: sec23cs023@sairamtap.edu.in, id: 0
+2025-09-03 10:00:31,066 - INFO - root - Completed: POST http://localhost:8000/students/register - Body: {"id":0,"email":"sec23cs023@sairamtap.edu.in","password_hash":"Priya@0572","full_name":"Priyanka V",... - Status: 200 - Time: 14.12ms
+2025-09-03 10:00:31,071 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 45394
+2025-09-03 10:00:31,083 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 12.07ms
+2025-09-03 10:00:38,834 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 45400
+2025-09-03 10:00:38,844 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 9.77ms
+2025-09-03 10:00:38,847 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 45400
+2025-09-03 10:00:38,857 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 45408
+2025-09-03 10:00:38,864 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 17.09ms
+2025-09-03 10:00:38,865 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 7.96ms
+2025-09-03 10:00:38,869 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 45408
+2025-09-03 10:00:38,877 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 8.03ms
+2025-09-03 10:00:51,383 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 53638
+2025-09-03 10:00:51,390 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 7.31ms
+2025-09-03 10:00:51,393 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 53638
+2025-09-03 10:00:51,401 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 8.33ms
+2025-09-03 10:00:53,262 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 53638
+2025-09-03 10:00:53,270 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.10ms
+2025-09-03 10:00:53,273 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 53638
+2025-09-03 10:00:53,280 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 7.10ms
+2025-09-03 10:00:56,565 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 53638
+2025-09-03 10:00:56,572 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 7.71ms
+2025-09-03 10:00:56,575 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 53638
+2025-09-03 10:00:56,584 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 8.56ms
+2025-09-03 10:00:58,917 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 53638
+2025-09-03 10:00:58,925 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 53654
+2025-09-03 10:00:58,932 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 15.05ms
+2025-09-03 10:00:58,933 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.21ms
+2025-09-03 10:00:58,936 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 53638
+2025-09-03 10:00:58,937 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 53654
+2025-09-03 10:00:58,956 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 19.51ms
+2025-09-03 10:00:58,956 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 19.46ms
+2025-09-03 10:00:59,821 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 53638
+2025-09-03 10:00:59,828 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 7.79ms
+2025-09-03 10:00:59,833 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 53638
+2025-09-03 10:00:59,840 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 7.72ms
+2025-09-03 10:01:01,848 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 53654
+2025-09-03 10:01:01,849 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 53638
+2025-09-03 10:01:01,865 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 17.11ms
+2025-09-03 10:01:01,866 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 17.07ms
+2025-09-03 10:01:01,870 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 53654
+2025-09-03 10:01:01,879 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 53638
+2025-09-03 10:01:01,889 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 19.41ms
+2025-09-03 10:01:01,890 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 11.41ms
+2025-09-03 10:01:20,840 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47668
+2025-09-03 10:01:20,847 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 47666
+2025-09-03 10:01:20,855 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 14.77ms
+2025-09-03 10:01:20,855 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 8.09ms
+2025-09-03 10:01:20,859 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 47666
+2025-09-03 10:01:20,859 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47668
+2025-09-03 10:01:20,876 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 17.84ms
+2025-09-03 10:01:20,877 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 17.81ms
+2025-09-03 10:01:21,786 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47668
+2025-09-03 10:01:21,793 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 6.78ms
+2025-09-03 10:01:21,796 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47668
+2025-09-03 10:01:21,803 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 7.46ms
+2025-09-03 10:01:22,742 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 47668
+2025-09-03 10:01:22,750 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 8.79ms
+2025-09-03 10:01:22,753 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 47668
+2025-09-03 10:01:22,761 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 7.14ms
+2025-09-03 10:01:23,973 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 47668
+2025-09-03 10:01:23,983 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 9.82ms
+2025-09-03 10:01:23,986 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 47668
+2025-09-03 10:01:23,994 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 47666
+2025-09-03 10:01:24,002 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 15.98ms
+2025-09-03 10:01:24,003 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 8.23ms
+2025-09-03 10:01:24,007 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 47666
+2025-09-03 10:01:24,015 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 7.99ms
+2025-09-03 10:07:20,118 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 47864
+2025-09-03 10:07:20,127 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 9.79ms
+2025-09-03 10:07:20,131 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 47864
+2025-09-03 10:07:20,139 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 7.91ms
+2025-09-03 10:07:24,113 - INFO - root - New Request: GET http://localhost:8000/students/0 172.18.0.1 47864
+2025-09-03 10:07:24,125 - INFO - root - Completed: GET http://localhost:8000/students/0 - Body:  - Status: 200 - Time: 11.95ms
+2025-09-03 10:07:35,179 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 47870
+2025-09-03 10:07:35,189 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 9.53ms
+2025-09-03 10:07:35,193 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 47870
+2025-09-03 10:07:35,202 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 9.65ms
+2025-09-03 10:07:35,206 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 47870
+2025-09-03 10:07:35,214 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 8.57ms
+2025-09-03 10:07:35,217 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 47870
+2025-09-03 10:07:35,226 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 8.79ms
+2025-09-03 10:07:51,018 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 50072
+2025-09-03 10:07:51,026 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 8.51ms
+2025-09-03 10:07:51,030 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 50072
+2025-09-03 10:07:51,037 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 6.80ms
+2025-09-03 10:07:53,106 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 50072
+2025-09-03 10:07:53,115 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.11ms
+2025-09-03 10:07:53,118 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 50072
+2025-09-03 10:07:53,126 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.23ms
+2025-09-03 10:07:55,478 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 50072
+2025-09-03 10:07:55,485 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 7.60ms
+2025-09-03 10:07:55,489 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 50072
+2025-09-03 10:07:55,497 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 7.91ms
+2025-09-03 10:07:55,501 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 50072
+2025-09-03 10:07:55,511 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 9.87ms
+2025-09-03 10:07:55,514 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 50072
+2025-09-03 10:07:55,523 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.84ms
+2025-09-03 10:07:57,042 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 50072
+2025-09-03 10:07:57,042 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 36718
+2025-09-03 10:07:57,059 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 16.97ms
+2025-09-03 10:07:57,059 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 16.90ms
+2025-09-03 10:07:57,063 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 36718
+2025-09-03 10:07:57,063 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 50072
+2025-09-03 10:07:57,082 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 18.96ms
+2025-09-03 10:07:57,082 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 18.93ms
+2025-09-03 10:08:03,944 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 36732
+2025-09-03 10:08:03,944 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 36730
+2025-09-03 10:08:03,960 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 16.68ms
+2025-09-03 10:08:03,962 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 17.72ms
+2025-09-03 10:08:03,966 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 36730
+2025-09-03 10:08:03,967 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 36732
+2025-09-03 10:08:03,985 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 18.37ms
+2025-09-03 10:08:03,985 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 18.31ms
+2025-09-03 10:08:05,662 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 36730
+2025-09-03 10:08:05,670 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.00ms
+2025-09-03 10:08:05,674 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 36730
+2025-09-03 10:08:05,682 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 7.99ms
+2025-09-03 10:08:06,509 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 36730
+2025-09-03 10:08:06,517 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 8.29ms
+2025-09-03 10:08:06,520 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 36730
+2025-09-03 10:08:06,530 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 9.19ms
+2025-09-03 10:08:07,357 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 36730
+2025-09-03 10:08:07,366 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 9.22ms
+2025-09-03 10:08:07,369 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 36730
+2025-09-03 10:08:07,380 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 36732
+2025-09-03 10:08:07,388 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 18.17ms
+2025-09-03 10:08:07,389 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 8.99ms
+2025-09-03 10:08:07,393 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 36732
+2025-09-03 10:08:07,401 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 8.12ms
+2025-09-03 10:10:33,311 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 58422
+2025-09-03 10:10:33,319 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 7.78ms
+2025-09-03 10:10:45,818 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 49584
+2025-09-03 10:10:45,828 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 10.16ms
+2025-09-03 10:10:55,440 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 39876
+2025-09-03 10:10:55,449 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 9.48ms
+2025-09-03 10:16:11,825 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 43266
+2025-09-03 10:16:11,837 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 12.00ms
+2025-09-03 10:16:11,843 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 43266
+2025-09-03 10:16:11,850 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 7.58ms
+2025-09-03 10:16:21,596 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 43272
+2025-09-03 10:16:21,604 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 7.50ms
+2025-09-03 10:16:21,607 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 43272
+2025-09-03 10:16:21,616 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 9.05ms
+2025-09-03 10:16:28,308 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47532
+2025-09-03 10:16:28,315 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 6.76ms
+2025-09-03 10:16:28,318 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47532
+2025-09-03 10:16:28,326 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 7.93ms
+2025-09-03 10:17:33,844 - INFO - root - New Request: OPTIONS http://localhost:8000/mentors/register 172.18.0.1 52352
+2025-09-03 10:17:33,844 - INFO - root - Completed: OPTIONS http://localhost:8000/mentors/register - Body:  - Status: 200 - Time: 0.69ms
+2025-09-03 10:17:33,847 - INFO - root - New Request: POST http://localhost:8000/mentors/register 172.18.0.1 52352
+2025-09-03 10:17:33,850 - INFO - root - Completed: POST http://localhost:8000/mentors/register - Body: {"email":"gugan123@gmail.com","password_hash":"gugan123","full_name":"gugan","phone":"7530000145","t... - Status: 422 - Time: 2.98ms
+2025-09-03 10:17:37,645 - INFO - root - New Request: POST http://localhost:8000/mentors/register 172.18.0.1 52352
+2025-09-03 10:17:37,647 - INFO - root - Completed: POST http://localhost:8000/mentors/register - Body: {"email":"gugan123@gmail.com","password_hash":"gugan123","full_name":"gugan","phone":"7530000145","t... - Status: 422 - Time: 1.16ms
+2025-09-03 10:20:21,105 - INFO - root - New Request: POST http://localhost:8000/mentors/register 172.18.0.1 35254
+2025-09-03 10:20:21,107 - INFO - root - Completed: POST http://localhost:8000/mentors/register - Body: {"email":"test@test.com","password_hash":"test123","full_name":"Test Mentor","phone":"1234567890","t... - Status: 422 - Time: 3.31ms
+2025-09-03 10:22:03,492 - INFO - root - New Request: POST http://localhost:8000/mentors/register 172.18.0.1 48740
+2025-09-03 10:22:03,493 - INFO - main - Registering mentor: john.doe@example.com
+2025-09-03 10:22:03,516 - ERROR - main - Error registering mentor john.doe@example.com: null value in column "id" of relation "mentors" violates not-null constraint
+DETAIL:  Failing row contains (null, john.doe@example.com, password123, John Doe, 9876543210, Senior Developer, {Python,React,FastAPI}, t, 2025-09-03 10:22:03.509569+00, 2025-09-03 10:22:03.509569+00).
+
+2025-09-03 10:22:03,517 - INFO - root - Completed: POST http://localhost:8000/mentors/register - Body: {"email":"john.doe@example.com","password_hash":"password123","full_name":"John Doe","phone":"987654... - Status: 400 - Time: 24.18ms
+2025-09-03 10:23:19,456 - INFO - root - New Request: POST http://localhost:8000/mentors/register 172.18.0.1 51868
+2025-09-03 10:23:19,457 - INFO - main - Registering mentor: john.doe@example.com
+2025-09-03 10:23:19,471 - INFO - main - Mentor registered successfully: john.doe@example.com, id: 1
+2025-09-03 10:23:19,472 - INFO - root - Completed: POST http://localhost:8000/mentors/register - Body: {"email":"john.doe@example.com","password_hash":"password123","full_name":"John Doe","phone":"987654... - Status: 200 - Time: 15.88ms
+2025-09-03 10:23:26,533 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 51878
+2025-09-03 10:23:26,546 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 13.34ms
+2025-09-03 10:25:46,808 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 42002
+2025-09-03 10:25:46,828 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 19.76ms
+2025-09-03 10:25:46,834 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 42002
+2025-09-03 10:25:46,844 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 10.18ms
+2025-09-03 10:25:48,619 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 42002
+2025-09-03 10:25:48,629 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 9.27ms
+2025-09-03 10:25:48,632 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 42002
+2025-09-03 10:25:48,642 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 10.13ms
+2025-09-03 10:25:52,053 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 42002
+2025-09-03 10:25:52,062 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 9.15ms
+2025-09-03 10:25:52,066 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 42002
+2025-09-03 10:25:52,075 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 9.68ms
+2025-09-03 10:25:58,582 - INFO - root - New Request: GET http://localhost:8000/mentors/1 172.18.0.1 42014
+2025-09-03 10:25:58,589 - INFO - root - Completed: GET http://localhost:8000/mentors/1 - Body:  - Status: 200 - Time: 7.00ms
+2025-09-03 10:26:55,566 - INFO - root - New Request: POST http://localhost:8000/mentors/register 172.18.0.1 50118
+2025-09-03 10:26:55,567 - INFO - main - Registering mentor: gugan123@gmail.com
+2025-09-03 10:26:55,586 - INFO - main - Mentor registered successfully: gugan123@gmail.com, id: 2
+2025-09-03 10:26:55,586 - INFO - root - Completed: POST http://localhost:8000/mentors/register - Body: {"email":"gugan123@gmail.com","password_hash":"gugan123","full_name":"gugan","phone":"7550199253","t... - Status: 200 - Time: 20.75ms
+2025-09-03 10:26:55,591 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 50118
+2025-09-03 10:26:55,601 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 10.00ms
+2025-09-03 10:26:58,233 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 50120
+2025-09-03 10:26:58,233 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 50118
+2025-09-03 10:26:58,248 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 14.75ms
+2025-09-03 10:26:58,248 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 14.64ms
+2025-09-03 10:26:58,252 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 50118
+2025-09-03 10:26:58,253 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 50120
+2025-09-03 10:26:58,267 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 14.69ms
+2025-09-03 10:26:58,267 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 14.10ms
+2025-09-03 10:27:00,420 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 50118
+2025-09-03 10:27:00,429 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 9.58ms
+2025-09-03 10:27:00,432 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 50118
+2025-09-03 10:27:00,441 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 50120
+2025-09-03 10:27:00,449 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 16.58ms
+2025-09-03 10:27:00,449 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 8.05ms
+2025-09-03 10:27:00,454 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 50120
+2025-09-03 10:27:00,462 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 7.87ms
+2025-09-03 10:27:13,772 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 36214
+2025-09-03 10:27:13,783 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 11.22ms
+2025-09-03 10:27:13,789 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 36214
+2025-09-03 10:27:13,801 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 11.82ms
+2025-09-03 10:30:54,147 - INFO - root - New Request: POST http://localhost:8000/students/register 172.18.0.1 35796
+2025-09-03 10:30:54,149 - INFO - root - Completed: POST http://localhost:8000/students/register - Body: {"email":"john.cs@example.com","password_hash":"pass123","full_name":"John Smith","phone":"123456789... - Status: 422 - Time: 1.98ms
+2025-09-03 10:32:37,593 - INFO - root - New Request: POST http://localhost:8000/students/register 172.18.0.1 55748
+2025-09-03 10:32:37,594 - INFO - main - Registering student: john.cs@example.com
+2025-09-03 10:32:37,623 - INFO - main - Student registered successfully: john.cs@example.com, id: 1
+2025-09-03 10:32:37,624 - INFO - root - Completed: POST http://localhost:8000/students/register - Body: {"email":"john.cs@example.com","password_hash":"pass123","full_name":"John Smith","phone":"123456789... - Status: 200 - Time: 31.12ms
+2025-09-03 10:32:51,600 - INFO - root - New Request: POST http://localhost:8000/students/register 172.18.0.1 59792
+2025-09-03 10:32:51,601 - INFO - main - Registering student: sarah.ece@example.com
+2025-09-03 10:32:51,609 - INFO - main - Student registered successfully: sarah.ece@example.com, id: 2
+2025-09-03 10:32:51,610 - INFO - root - Completed: POST http://localhost:8000/students/register - Body: {"email":"sarah.ece@example.com","password_hash":"pass123","full_name":"Sarah Johnson","phone":"9876... - Status: 200 - Time: 10.59ms
+2025-09-03 10:32:59,282 - INFO - root - New Request: POST http://localhost:8000/students/register 172.18.0.1 58636
+2025-09-03 10:32:59,283 - INFO - main - Registering student: mike.mech@example.com
+2025-09-03 10:32:59,311 - INFO - main - Student registered successfully: mike.mech@example.com, id: 3
+2025-09-03 10:32:59,312 - INFO - root - Completed: POST http://localhost:8000/students/register - Body: {"email":"mike.mech@example.com","password_hash":"pass123","full_name":"Mike Wilson","phone":"555555... - Status: 200 - Time: 29.76ms
+2025-09-03 10:33:05,921 - INFO - root - New Request: GET http://localhost:8000/admin/students/filter?department=computer 172.18.0.1 58646
+2025-09-03 10:33:05,939 - INFO - root - Completed: GET http://localhost:8000/admin/students/filter?department=computer - Body:  - Status: 200 - Time: 18.38ms
+2025-09-03 10:33:13,215 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 60918
+2025-09-03 10:33:13,229 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 13.91ms
+2025-09-03 10:33:51,260 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 53558
+2025-09-03 10:33:51,268 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 7.61ms
+2025-09-03 10:33:51,271 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 53558
+2025-09-03 10:33:51,280 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 8.57ms
+2025-09-03 10:34:00,115 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 53562
+2025-09-03 10:34:00,137 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 21.61ms
+2025-09-03 10:34:00,140 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 53562
+2025-09-03 10:34:00,149 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 9.46ms
+2025-09-03 10:34:00,152 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 53562
+2025-09-03 10:34:00,161 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 8.50ms
+2025-09-03 10:34:00,164 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 53562
+2025-09-03 10:34:00,171 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 7.42ms
+2025-09-04 05:09:04,661 - INFO - root - New Request: POST http://localhost:8000/students/register 172.18.0.1 44964
+2025-09-04 05:09:04,663 - INFO - main - Registering student: sarah.ece@example.com
+2025-09-04 05:09:04,736 - ERROR - main - Error registering student sarah.ece@example.com: duplicate key value violates unique constraint "students_email_key"
+DETAIL:  Key (email)=(sarah.ece@example.com) already exists.
+
+2025-09-04 05:09:04,737 - INFO - root - Completed: POST http://localhost:8000/students/register - Body: {"email":"sarah.ece@example.com","password_hash":"pass123","full_name":"Sarah Johnson","phone":"2345... - Status: 400 - Time: 78.86ms
+2025-09-04 05:09:12,743 - INFO - root - New Request: POST http://localhost:8000/students/register 172.18.0.1 45820
+2025-09-04 05:09:12,744 - INFO - main - Registering student: mike.mech@example.com
+2025-09-04 05:09:12,757 - ERROR - main - Error registering student mike.mech@example.com: duplicate key value violates unique constraint "students_email_key"
+DETAIL:  Key (email)=(mike.mech@example.com) already exists.
+
+2025-09-04 05:09:12,759 - INFO - root - Completed: POST http://localhost:8000/students/register - Body: {"email":"mike.mech@example.com","password_hash":"pass123","full_name":"Mike Brown","phone":"3456789... - Status: 400 - Time: 16.71ms
+2025-09-04 05:09:25,792 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 48560
+2025-09-04 05:09:25,816 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 23.98ms
+2025-09-04 05:09:42,893 - INFO - root - New Request: POST http://localhost:8000/students/register 172.18.0.1 57600
+2025-09-04 05:09:42,895 - INFO - main - Registering student: lisa.civil@example.com
+2025-09-04 05:09:42,907 - INFO - main - Student registered successfully: lisa.civil@example.com, id: 36
+2025-09-04 05:09:42,908 - INFO - root - Completed: POST http://localhost:8000/students/register - Body: {"email":"lisa.civil@example.com","password_hash":"pass123","full_name":"Lisa Davis","phone":"456789... - Status: 200 - Time: 16.20ms
+2025-09-04 05:09:55,584 - INFO - root - New Request: GET http://localhost:8000/admin/students/filter?department=civil 172.18.0.1 36634
+2025-09-04 05:09:55,605 - INFO - root - Completed: GET http://localhost:8000/admin/students/filter?department=civil - Body:  - Status: 200 - Time: 20.27ms
+2025-09-04 05:10:04,916 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 51762
+2025-09-04 05:10:04,932 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 16.41ms
+2025-09-04 05:10:12,506 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 39582
+2025-09-04 05:10:12,518 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 12.10ms
+2025-09-04 05:11:10,165 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 53408
+2025-09-04 05:11:10,212 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 47.76ms
+2025-09-04 05:11:10,242 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 53408
+2025-09-04 05:11:10,262 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 20.31ms
+2025-09-04 05:12:08,659 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 53422
+2025-09-04 05:12:08,673 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 14.46ms
+2025-09-04 05:12:08,679 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 53422
+2025-09-04 05:12:08,690 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 10.75ms
+2025-09-04 05:12:08,695 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 53422
+2025-09-04 05:12:08,706 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 10.91ms
+2025-09-04 05:12:08,712 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 53422
+2025-09-04 05:12:08,724 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 11.18ms
+2025-09-04 05:12:08,731 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 53422
+2025-09-04 05:12:08,743 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 11.63ms
+2025-09-04 05:12:08,747 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 53422
+2025-09-04 05:12:08,760 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 13.13ms
+2025-09-04 05:12:08,765 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 53422
+2025-09-04 05:12:08,775 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 10.45ms
+2025-09-04 05:12:08,780 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 53422
+2025-09-04 05:12:08,794 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 14.32ms
+2025-09-04 05:12:15,485 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 49390
+2025-09-04 05:12:15,502 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 16.09ms
+2025-09-04 05:12:20,049 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 49390
+2025-09-04 05:12:20,059 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 10.34ms
+2025-09-04 05:12:20,065 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 49390
+2025-09-04 05:12:20,077 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 12.05ms
+2025-09-04 05:12:21,307 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 49390
+2025-09-04 05:12:21,319 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 49404
+2025-09-04 05:12:21,331 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 23.45ms
+2025-09-04 05:12:21,332 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 12.96ms
+2025-09-04 05:12:21,337 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 49390
+2025-09-04 05:12:21,353 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 49404
+2025-09-04 05:12:21,364 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 27.44ms
+2025-09-04 05:12:21,366 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 12.68ms
+2025-09-04 05:12:22,616 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 49390
+2025-09-04 05:12:22,628 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 49404
+2025-09-04 05:12:22,639 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 22.45ms
+2025-09-04 05:12:22,640 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 12.60ms
+2025-09-04 05:12:22,645 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 49390
+2025-09-04 05:12:22,657 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 49404
+2025-09-04 05:12:22,673 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 28.53ms
+2025-09-04 05:12:22,675 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 17.64ms
+2025-09-04 05:12:28,710 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 49414
+2025-09-04 05:12:28,722 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 49422
+2025-09-04 05:12:28,735 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 24.62ms
+2025-09-04 05:12:28,736 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 13.31ms
+2025-09-04 05:12:28,741 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 49414
+2025-09-04 05:12:28,752 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 49422
+2025-09-04 05:12:28,763 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 22.26ms
+2025-09-04 05:12:28,764 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 12.60ms
+2025-09-04 05:12:29,794 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 49422
+2025-09-04 05:12:29,805 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 10.66ms
+2025-09-04 05:12:29,810 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 49422
+2025-09-04 05:12:29,822 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 11.62ms
+2025-09-04 05:12:31,216 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 49422
+2025-09-04 05:12:31,229 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 49414
+2025-09-04 05:12:31,230 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 49432
+2025-09-04 05:12:31,251 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 35.30ms
+2025-09-04 05:12:31,253 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 24.74ms
+2025-09-04 05:12:31,254 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 24.65ms
+2025-09-04 05:12:31,260 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 49422
+2025-09-04 05:12:31,272 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 49414
+2025-09-04 05:12:31,273 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 49432
+2025-09-04 05:12:31,297 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 36.85ms
+2025-09-04 05:12:31,298 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 26.12ms
+2025-09-04 05:12:31,300 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 27.09ms
+2025-09-04 05:12:31,305 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 49422
+2025-09-04 05:12:31,318 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 49414
+2025-09-04 05:12:31,329 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 23.36ms
+2025-09-04 05:12:31,330 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 11.43ms
+2025-09-04 05:12:32,363 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 49414
+2025-09-04 05:12:32,380 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 16.83ms
+2025-09-04 05:12:32,385 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 49414
+2025-09-04 05:12:32,399 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 49422
+2025-09-04 05:12:32,409 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 23.79ms
+2025-09-04 05:12:32,410 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 11.10ms
+2025-09-04 05:12:32,415 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 49422
+2025-09-04 05:12:32,427 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 11.67ms
+2025-09-04 05:19:52,209 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 57380
+2025-09-04 05:19:52,247 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 38.57ms
+2025-09-04 05:19:52,268 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 57380
+2025-09-04 05:19:52,282 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 14.63ms
+2025-09-04 05:20:00,433 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 57390
+2025-09-04 05:20:00,450 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 16.78ms
+2025-09-04 05:20:00,454 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 57390
+2025-09-04 05:20:00,466 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 12.21ms
+2025-09-04 05:20:00,471 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 57390
+2025-09-04 05:20:00,485 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 13.49ms
+2025-09-04 05:20:00,488 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 57390
+2025-09-04 05:20:00,499 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 10.80ms
+2025-09-04 05:20:00,503 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 57390
+2025-09-04 05:20:00,515 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 11.64ms
+2025-09-04 05:20:00,520 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 57390
+2025-09-04 05:20:00,531 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 10.85ms
+2025-09-04 05:20:00,535 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 57390
+2025-09-04 05:20:00,547 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 11.77ms
+2025-09-04 05:20:00,551 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 57390
+2025-09-04 05:20:00,561 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 10.24ms
+2025-09-04 05:20:42,561 - INFO - root - New Request: GET http://localhost:8000/ 172.18.0.1 41112
+2025-09-04 05:20:42,563 - INFO - root - Completed: GET http://localhost:8000/ - Body:  - Status: 200 - Time: 2.31ms
+2025-09-04 05:20:57,714 - INFO - root - New Request: GET http://localhost:8000/docs?id=8ea49a8e-b436-4f7f-852e-98d2be4708f0&vscodeBrowserReqId=1756963257391 172.18.0.1 60710
+2025-09-04 05:20:57,715 - INFO - root - Completed: GET http://localhost:8000/docs?id=8ea49a8e-b436-4f7f-852e-98d2be4708f0&vscodeBrowserReqId=1756963257391 - Body:  - Status: 200 - Time: 1.13ms
+2025-09-04 05:20:57,845 - INFO - root - New Request: GET http://localhost:8000/openapi.json 172.18.0.1 60710
+2025-09-04 05:20:57,871 - INFO - root - Completed: GET http://localhost:8000/openapi.json - Body:  - Status: 200 - Time: 25.27ms
+2025-09-04 05:21:08,779 - INFO - root - New Request: GET http://localhost:8000/docs 172.18.0.1 44372
+2025-09-04 05:21:08,780 - INFO - root - Completed: GET http://localhost:8000/docs - Body:  - Status: 200 - Time: 1.37ms
+2025-09-04 05:21:13,415 - INFO - root - New Request: GET http://localhost:8000/openapi.json 172.18.0.1 44372
+2025-09-04 05:21:13,416 - INFO - root - Completed: GET http://localhost:8000/openapi.json - Body:  - Status: 200 - Time: 1.67ms
+2025-09-04 05:22:03,421 - INFO - root - New Request: GET http://localhost:8000/students/0 172.18.0.1 38500
+2025-09-04 05:22:03,437 - INFO - root - Completed: GET http://localhost:8000/students/0 - Body:  - Status: 200 - Time: 16.40ms
+2025-09-04 05:22:10,590 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 38504
+2025-09-04 05:22:10,602 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 12.63ms
+2025-09-04 05:22:10,607 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 38504
+2025-09-04 05:22:10,619 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 11.33ms
+2025-09-04 05:22:16,007 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 58366
+2025-09-04 05:22:16,020 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 58370
+2025-09-04 05:22:16,033 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 26.87ms
+2025-09-04 05:22:16,035 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 15.43ms
+2025-09-04 05:22:16,038 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 58366
+2025-09-04 05:22:16,051 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 58370
+2025-09-04 05:22:16,064 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 25.85ms
+2025-09-04 05:22:16,065 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 14.78ms
+2025-09-04 05:24:01,716 - INFO - root - New Request: OPTIONS http://localhost:8000/events/create 172.18.0.1 38074
+2025-09-04 05:24:01,717 - INFO - root - Completed: OPTIONS http://localhost:8000/events/create - Body:  - Status: 200 - Time: 1.45ms
+2025-09-04 05:24:01,723 - INFO - root - New Request: POST http://localhost:8000/events/create 172.18.0.1 38074
+2025-09-04 05:24:01,725 - INFO - main - Creating event: ai workshop
+2025-09-04 05:24:01,740 - ERROR - main - Error creating event ai workshop: integer out of range
+
+2025-09-04 05:24:01,742 - INFO - root - Completed: POST http://localhost:8000/events/create - Body: {"id":1756963441389,"title":"ai workshop","description":"it is a workshop on how to use ai to build ... - Status: 400 - Time: 19.34ms
+2025-09-04 05:24:03,501 - INFO - root - New Request: POST http://localhost:8000/events/create 172.18.0.1 38074
+2025-09-04 05:24:03,503 - INFO - main - Creating event: ai workshop
+2025-09-04 05:24:03,513 - ERROR - main - Error creating event ai workshop: integer out of range
+
+2025-09-04 05:24:03,515 - INFO - root - Completed: POST http://localhost:8000/events/create - Body: {"id":1756963443497,"title":"ai workshop","description":"it is a workshop on how to use ai to build ... - Status: 400 - Time: 13.64ms
+2025-09-04 05:24:03,658 - INFO - root - New Request: POST http://localhost:8000/events/create 172.18.0.1 38074
+2025-09-04 05:24:03,660 - INFO - main - Creating event: ai workshop
+2025-09-04 05:24:03,669 - ERROR - main - Error creating event ai workshop: integer out of range
+
+2025-09-04 05:24:03,670 - INFO - root - Completed: POST http://localhost:8000/events/create - Body: {"id":1756963443655,"title":"ai workshop","description":"it is a workshop on how to use ai to build ... - Status: 400 - Time: 11.58ms
+2025-09-04 05:24:03,877 - INFO - root - New Request: POST http://localhost:8000/events/create 172.18.0.1 38074
+2025-09-04 05:24:03,879 - INFO - main - Creating event: ai workshop
+2025-09-04 05:24:03,888 - ERROR - main - Error creating event ai workshop: integer out of range
+
+2025-09-04 05:24:03,889 - INFO - root - Completed: POST http://localhost:8000/events/create - Body: {"id":1756963443875,"title":"ai workshop","description":"it is a workshop on how to use ai to build ... - Status: 400 - Time: 12.32ms
+2025-09-04 05:43:50,109 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 58874
+2025-09-04 05:43:50,165 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 56.30ms
+2025-09-04 05:43:50,176 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 58874
+2025-09-04 05:43:50,190 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 14.14ms
+2025-09-04 05:43:53,536 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 58874
+2025-09-04 05:43:53,548 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 58884
+2025-09-04 05:43:53,563 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 27.13ms
+2025-09-04 05:43:53,564 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 16.76ms
+2025-09-04 05:43:53,569 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 58874
+2025-09-04 05:43:53,583 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 58884
+2025-09-04 05:43:53,598 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 28.17ms
+2025-09-04 05:43:53,600 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 17.64ms
+2025-09-04 05:44:43,152 - INFO - root - New Request: OPTIONS http://localhost:8000/events/create 172.18.0.1 41862
+2025-09-04 05:44:43,153 - INFO - root - Completed: OPTIONS http://localhost:8000/events/create - Body:  - Status: 200 - Time: 1.35ms
+2025-09-04 05:44:43,159 - INFO - root - New Request: POST http://localhost:8000/events/create 172.18.0.1 41862
+2025-09-04 05:44:43,160 - INFO - main - Creating event: ai workshop
+2025-09-04 05:44:43,210 - INFO - main - Event created successfully: ai workshop, id: 1
+2025-09-04 05:44:43,211 - INFO - root - Completed: POST http://localhost:8000/events/create - Body: {"title":"ai workshop","description":"ai for chatbot","starts_at":"2025-09-17T10:15","ends_at":"2025... - Status: 200 - Time: 52.85ms
+2025-09-04 05:44:43,218 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 41862
+2025-09-04 05:44:43,233 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 15.10ms
+2025-09-04 05:44:51,947 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 41872
+2025-09-04 05:44:51,960 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 13.82ms
+2025-09-04 05:44:51,966 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 41872
+2025-09-04 05:44:51,980 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 13.54ms
+2025-09-04 05:44:53,758 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 41872
+2025-09-04 05:44:53,772 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 41886
+2025-09-04 05:44:53,785 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 27.12ms
+2025-09-04 05:44:53,787 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 14.76ms
+2025-09-04 05:44:53,793 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 41872
+2025-09-04 05:44:53,794 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 41886
+2025-09-04 05:44:53,819 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 25.56ms
+2025-09-04 05:44:53,820 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 25.54ms
+2025-09-04 05:45:07,033 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 45420
+2025-09-04 05:45:07,047 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 45434
+2025-09-04 05:45:07,059 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 26.43ms
+2025-09-04 05:45:07,061 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 13.87ms
+2025-09-04 05:45:07,064 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 45420
+2025-09-04 05:45:07,078 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 45434
+2025-09-04 05:45:07,094 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 29.93ms
+2025-09-04 05:45:07,096 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 17.33ms
+2025-09-04 05:46:15,625 - INFO - root - New Request: OPTIONS http://localhost:8000/student_certificates/issue 172.18.0.1 42380
+2025-09-04 05:46:15,626 - INFO - root - Completed: OPTIONS http://localhost:8000/student_certificates/issue - Body:  - Status: 200 - Time: 1.05ms
+2025-09-04 05:46:15,630 - INFO - root - New Request: POST http://localhost:8000/student_certificates/issue 172.18.0.1 42380
+2025-09-04 05:46:15,632 - INFO - main - Issuing student certificate for student: 0
+2025-09-04 05:46:15,647 - ERROR - main - Error issuing student certificate for student 0: integer out of range
+
+2025-09-04 05:46:15,648 - INFO - root - Completed: POST http://localhost:8000/student_certificates/issue - Body: {"id":1756964775312,"student_id":0,"certificate_title":"ai workshop","description":"participation","... - Status: 400 - Time: 18.18ms
+2025-09-04 05:48:38,339 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 59176
+2025-09-04 05:48:38,370 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 30.61ms
+2025-09-04 05:48:38,379 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 59176
+2025-09-04 05:48:38,391 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 11.95ms
+2025-09-04 05:48:41,960 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 59176
+2025-09-04 05:48:41,977 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 16.60ms
+2025-09-04 05:48:41,982 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 59176
+2025-09-04 05:48:41,998 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 15.90ms
+2025-09-04 05:48:43,506 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 59176
+2025-09-04 05:48:43,520 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 59180
+2025-09-04 05:48:43,533 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 27.56ms
+2025-09-04 05:48:43,536 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 16.44ms
+2025-09-04 05:48:43,542 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 59176
+2025-09-04 05:48:43,556 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 59180
+2025-09-04 05:48:43,572 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 30.26ms
+2025-09-04 05:48:43,573 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 17.74ms
+2025-09-04 05:48:45,330 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 59180
+2025-09-04 05:48:45,343 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 59176
+2025-09-04 05:48:45,356 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 26.82ms
+2025-09-04 05:48:45,358 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 14.92ms
+2025-09-04 05:48:45,365 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 59176
+2025-09-04 05:48:45,379 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 59180
+2025-09-04 05:48:45,400 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 35.09ms
+2025-09-04 05:48:45,401 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 22.13ms
+2025-09-04 05:48:45,406 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 59176
+2025-09-04 05:48:45,418 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 59180
+2025-09-04 05:48:45,430 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 24.13ms
+2025-09-04 05:48:45,431 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 13.33ms
+2025-09-04 05:48:45,436 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 59176
+2025-09-04 05:48:45,451 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 59180
+2025-09-04 05:48:45,470 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 33.69ms
+2025-09-04 05:48:45,471 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 20.77ms
+2025-09-04 05:48:46,817 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 59180
+2025-09-04 05:48:46,831 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 59176
+2025-09-04 05:48:46,845 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 27.42ms
+2025-09-04 05:48:46,848 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 16.86ms
+2025-09-04 05:48:46,855 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 59180
+2025-09-04 05:48:46,870 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 59176
+2025-09-04 05:48:46,883 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 27.77ms
+2025-09-04 05:48:46,884 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 13.85ms
+2025-09-04 05:48:48,003 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 59176
+2025-09-04 05:48:48,021 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 59180
+2025-09-04 05:48:48,034 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 30.61ms
+2025-09-04 05:48:48,035 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 14.59ms
+2025-09-04 05:48:48,039 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 59176
+2025-09-04 05:48:48,055 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 59180
+2025-09-04 05:48:48,068 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 28.45ms
+2025-09-04 05:48:48,069 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 14.51ms
+2025-09-04 05:49:27,357 - INFO - root - New Request: POST http://localhost:8000/student_certificates/issue 172.18.0.1 47032
+2025-09-04 05:49:27,359 - INFO - main - Issuing student certificate for student: 0
+2025-09-04 05:49:27,380 - INFO - main - Student certificate issued successfully: 0, id: 1
+2025-09-04 05:49:27,381 - INFO - root - Completed: POST http://localhost:8000/student_certificates/issue - Body: {"student_id":0,"certificate_title":"ai workshop","description":"workshop participation","issued_by"... - Status: 200 - Time: 23.74ms
+2025-09-04 05:49:41,687 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 47036
+2025-09-04 05:49:41,688 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47040
+2025-09-04 05:49:41,716 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 28.25ms
+2025-09-04 05:49:41,717 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 28.62ms
+2025-09-04 05:49:41,722 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 47036
+2025-09-04 05:49:41,736 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47040
+2025-09-04 05:49:41,747 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 25.71ms
+2025-09-04 05:49:41,749 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 13.11ms
+2025-09-04 05:49:42,841 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 47040
+2025-09-04 05:49:42,854 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47036
+2025-09-04 05:49:42,869 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 28.46ms
+2025-09-04 05:49:42,872 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 18.35ms
+2025-09-04 05:49:42,878 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47036
+2025-09-04 05:49:42,891 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 47040
+2025-09-04 05:49:42,906 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 27.91ms
+2025-09-04 05:49:42,907 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 16.51ms
+2025-09-04 05:50:09,593 - INFO - root - New Request: GET http://localhost:8000/student_certificates/1 172.18.0.1 55740
+2025-09-04 05:50:09,609 - INFO - root - Completed: GET http://localhost:8000/student_certificates/1 - Body:  - Status: 200 - Time: 15.41ms
+2025-09-04 05:50:23,378 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 55752
+2025-09-04 05:50:23,395 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 17.71ms
+2025-09-04 05:50:23,400 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 55752
+2025-09-04 05:50:23,417 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 16.85ms
+2025-09-04 05:50:23,421 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 55752
+2025-09-04 05:50:23,432 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 11.09ms
+2025-09-04 05:50:23,437 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 55752
+2025-09-04 05:50:23,450 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 12.58ms
+2025-09-04 05:50:31,320 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 36254
+2025-09-04 05:50:31,333 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 13.33ms
+2025-09-04 05:50:31,338 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 36254
+2025-09-04 05:50:31,351 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 12.88ms
+2025-09-04 05:50:31,356 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 36254
+2025-09-04 05:50:31,369 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 12.54ms
+2025-09-04 05:50:31,373 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 36254
+2025-09-04 05:50:31,385 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 12.25ms
+2025-09-04 05:50:31,390 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 36254
+2025-09-04 05:50:31,407 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 16.44ms
+2025-09-04 05:50:31,413 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 36254
+2025-09-04 05:50:31,428 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 15.39ms
+2025-09-04 05:50:31,434 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 36254
+2025-09-04 05:50:31,448 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 13.61ms
+2025-09-04 05:50:31,453 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 36254
+2025-09-04 05:50:31,466 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 13.67ms
+2025-09-04 05:50:33,073 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 36254
+2025-09-04 05:50:33,086 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 12.71ms
+2025-09-04 05:50:33,090 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 36254
+2025-09-04 05:50:33,105 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 15.61ms
+2025-09-04 05:50:34,577 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 36254
+2025-09-04 05:50:34,589 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 34116
+2025-09-04 05:50:34,602 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 25.01ms
+2025-09-04 05:50:34,605 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 15.30ms
+2025-09-04 05:50:34,611 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 36254
+2025-09-04 05:50:34,624 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 34116
+2025-09-04 05:50:34,638 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 26.92ms
+2025-09-04 05:50:34,639 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 15.04ms
+2025-09-04 05:50:36,166 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 34116
+2025-09-04 05:50:36,167 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 36254
+2025-09-04 05:50:36,192 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 25.86ms
+2025-09-04 05:50:36,194 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 27.44ms
+2025-09-04 05:50:36,200 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 36254
+2025-09-04 05:50:36,213 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 34116
+2025-09-04 05:50:36,228 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 27.64ms
+2025-09-04 05:50:36,229 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 16.72ms
+2025-09-04 05:50:39,322 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 34116
+2025-09-04 05:50:39,336 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 36254
+2025-09-04 05:50:39,349 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 26.79ms
+2025-09-04 05:50:39,351 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 14.57ms
+2025-09-04 05:50:39,356 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 34116
+2025-09-04 05:50:39,371 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 36254
+2025-09-04 05:50:39,383 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 26.56ms
+2025-09-04 05:50:39,384 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 13.73ms
+2025-09-04 05:50:47,625 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 34128
+2025-09-04 05:50:47,640 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 14.54ms
+2025-09-04 05:50:47,645 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 34128
+2025-09-04 05:50:47,657 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 11.70ms
+2025-09-04 05:50:49,246 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 34128
+2025-09-04 05:50:49,264 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 34136
+2025-09-04 05:50:49,265 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 34156
+2025-09-04 05:50:49,268 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 34144
+2025-09-04 05:50:49,310 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 64.10ms
+2025-09-04 05:50:49,312 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 48.19ms
+2025-09-04 05:50:49,313 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 47.35ms
+2025-09-04 05:50:49,313 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 45.57ms
+2025-09-04 05:50:49,318 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 34128
+2025-09-04 05:50:49,336 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 34136
+2025-09-04 05:50:49,337 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 34156
+2025-09-04 05:50:49,338 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 34144
+2025-09-04 05:50:49,372 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 53.80ms
+2025-09-04 05:50:49,373 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 37.41ms
+2025-09-04 05:50:49,374 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 37.06ms
+2025-09-04 05:50:49,375 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 36.62ms
+2025-09-04 05:50:50,752 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 34136
+2025-09-04 05:50:50,769 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 16.13ms
+2025-09-04 05:50:50,773 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 34136
+2025-09-04 05:50:50,789 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 34144
+2025-09-04 05:50:50,802 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 28.81ms
+2025-09-04 05:50:50,803 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 14.13ms
+2025-09-04 05:50:50,809 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 34144
+2025-09-04 05:50:50,820 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 11.65ms
+2025-09-04 05:50:52,156 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 34144
+2025-09-04 05:50:52,170 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 34136
+2025-09-04 05:50:52,172 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 34156
+2025-09-04 05:50:52,172 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 34128
+2025-09-04 05:50:52,213 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 57.01ms
+2025-09-04 05:50:52,214 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 43.67ms
+2025-09-04 05:50:52,215 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 43.10ms
+2025-09-04 05:50:52,215 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 42.84ms
+2025-09-04 05:50:52,221 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 34144
+2025-09-04 05:50:52,235 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 34128
+2025-09-04 05:50:52,236 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 34156
+2025-09-04 05:50:52,237 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 34136
+2025-09-04 05:50:52,272 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 51.36ms
+2025-09-04 05:50:52,274 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 38.99ms
+2025-09-04 05:50:52,274 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 38.34ms
+2025-09-04 05:50:52,275 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 38.02ms
+2025-09-04 05:50:58,533 - INFO - root - New Request: GET http://localhost:8000/students/36 172.18.0.1 32958
+2025-09-04 05:50:58,545 - INFO - root - Completed: GET http://localhost:8000/students/36 - Body:  - Status: 200 - Time: 12.19ms
+2025-09-04 05:51:13,321 - INFO - root - New Request: GET http://localhost:8000/admin/students/filter?department=computer+science 172.18.0.1 32964
+2025-09-04 05:51:13,336 - INFO - root - Completed: GET http://localhost:8000/admin/students/filter?department=computer+science - Body:  - Status: 200 - Time: 14.95ms
+2025-09-04 05:51:17,245 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 32964
+2025-09-04 05:51:17,257 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 11.79ms
+2025-09-04 05:51:23,740 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 47704
+2025-09-04 05:51:23,760 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 20.39ms
+2025-09-04 05:51:23,765 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 47704
+2025-09-04 05:51:23,783 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 17.53ms
+2025-09-04 05:51:23,787 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 47704
+2025-09-04 05:51:23,798 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 11.54ms
+2025-09-04 05:51:23,803 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 47704
+2025-09-04 05:51:23,815 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 11.79ms
+2025-09-04 05:51:28,184 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 47704
+2025-09-04 05:51:28,197 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47718
+2025-09-04 05:51:28,210 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 26.08ms
+2025-09-04 05:51:28,212 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 14.46ms
+2025-09-04 05:51:28,217 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 47704
+2025-09-04 05:51:28,232 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47718
+2025-09-04 05:51:28,246 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 28.36ms
+2025-09-04 05:51:28,247 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 14.85ms
+2025-09-04 05:51:29,268 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 47718
+2025-09-04 05:51:29,281 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47704
+2025-09-04 05:51:29,295 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 26.41ms
+2025-09-04 05:51:29,296 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 14.56ms
+2025-09-04 05:51:29,301 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47704
+2025-09-04 05:51:29,302 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 47718
+2025-09-04 05:51:29,329 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 27.40ms
+2025-09-04 05:51:29,329 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 27.09ms
+2025-09-04 06:25:21,162 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 53116
+2025-09-04 06:25:21,244 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 82.92ms
+2025-09-04 06:25:21,252 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 53116
+2025-09-04 06:25:21,259 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 6.99ms
+2025-09-04 06:25:24,119 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 53116
+2025-09-04 06:25:24,127 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 53132
+2025-09-04 06:25:24,135 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 15.92ms
+2025-09-04 06:25:24,136 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 9.03ms
+2025-09-04 06:25:24,140 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 53132
+2025-09-04 06:25:24,140 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 53116
+2025-09-04 06:25:24,155 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 15.05ms
+2025-09-04 06:25:24,155 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 15.08ms
+2025-09-04 06:25:24,159 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 53116
+2025-09-04 06:25:24,159 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 53132
+2025-09-04 06:25:24,177 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 17.92ms
+2025-09-04 06:25:24,177 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 17.72ms
+2025-09-04 06:25:24,180 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 53132
+2025-09-04 06:25:24,188 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 53116
+2025-09-04 06:25:24,195 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 14.87ms
+2025-09-04 06:25:24,196 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 7.74ms
+2025-09-04 06:25:41,745 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 37888
+2025-09-04 06:25:41,753 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.10ms
+2025-09-04 06:25:41,756 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 37888
+2025-09-04 06:25:41,762 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 6.38ms
+2025-09-04 06:25:42,877 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 37888
+2025-09-04 06:25:42,885 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 37904
+2025-09-04 06:25:42,892 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 14.67ms
+2025-09-04 06:25:42,893 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 7.34ms
+2025-09-04 06:25:42,895 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 37888
+2025-09-04 06:25:42,903 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 37904
+2025-09-04 06:25:42,910 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 15.40ms
+2025-09-04 06:25:42,911 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.07ms
+2025-09-04 06:25:46,399 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 37904
+2025-09-04 06:25:46,407 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 37888
+2025-09-04 06:25:46,414 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 15.11ms
+2025-09-04 06:25:46,415 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 7.92ms
+2025-09-04 06:25:46,417 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 37904
+2025-09-04 06:25:46,424 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 37888
+2025-09-04 06:25:46,431 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 13.75ms
+2025-09-04 06:25:46,432 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 7.65ms
+2025-09-04 06:25:47,405 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 37888
+2025-09-04 06:25:47,413 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 37904
+2025-09-04 06:25:47,420 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 14.89ms
+2025-09-04 06:25:47,421 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.31ms
+2025-09-04 06:25:47,423 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 37888
+2025-09-04 06:25:47,432 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 37904
+2025-09-04 06:25:47,439 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 15.96ms
+2025-09-04 06:25:47,440 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.36ms
+2025-09-04 06:37:53,579 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 37068
+2025-09-04 06:37:53,604 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 24.58ms
+2025-09-04 06:37:53,609 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 37068
+2025-09-04 06:37:53,616 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 6.65ms
+2025-09-04 06:37:56,767 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 37068
+2025-09-04 06:37:56,778 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 37070
+2025-09-04 06:37:56,788 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 20.95ms
+2025-09-04 06:37:56,789 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 10.27ms
+2025-09-04 06:37:56,792 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 37068
+2025-09-04 06:37:56,800 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 37070
+2025-09-04 06:37:56,809 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 17.08ms
+2025-09-04 06:37:56,810 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 10.01ms
+2025-09-04 06:41:47,597 - INFO - root - New Request: OPTIONS http://localhost:8000/events/create 172.18.0.1 46986
+2025-09-04 06:41:47,597 - INFO - root - Completed: OPTIONS http://localhost:8000/events/create - Body:  - Status: 200 - Time: 0.61ms
+2025-09-04 06:41:47,600 - INFO - root - New Request: POST http://localhost:8000/events/create 172.18.0.1 46986
+2025-09-04 06:41:47,601 - INFO - main - Creating event: ml workshop
+2025-09-04 06:41:47,619 - INFO - main - Event created successfully: ml workshop, id: 2
+2025-09-04 06:41:47,619 - INFO - root - Completed: POST http://localhost:8000/events/create - Body: {"title":"ml workshop","description":"ml workshop of different algorithms","starts_at":"2025-09-18T0... - Status: 200 - Time: 19.56ms
+2025-09-04 06:41:47,624 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 46986
+2025-09-04 06:41:47,633 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 8.89ms
+2025-09-04 06:42:09,613 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 47000
+2025-09-04 06:42:09,623 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47016
+2025-09-04 06:42:09,630 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 16.75ms
+2025-09-04 06:42:09,631 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.37ms
+2025-09-04 06:42:09,634 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 47000
+2025-09-04 06:42:09,642 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47016
+2025-09-04 06:42:09,652 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 18.43ms
+2025-09-04 06:42:09,654 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 11.56ms
+2025-09-04 06:42:16,270 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 36234
+2025-09-04 06:42:16,278 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 7.08ms
+2025-09-04 06:42:16,280 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 36234
+2025-09-04 06:42:16,288 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.13ms
+2025-09-04 06:44:58,191 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 53144
+2025-09-04 06:44:58,199 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 53154
+2025-09-04 06:44:58,207 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 53158
+2025-09-04 06:44:58,215 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 53164
+2025-09-04 06:44:58,216 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 24.87ms
+2025-09-04 06:44:58,226 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 26.58ms
+2025-09-04 06:44:58,227 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 20.66ms
+2025-09-04 06:44:58,229 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 13.49ms
+2025-09-04 06:44:58,232 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 53144
+2025-09-04 06:44:58,241 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 53154
+2025-09-04 06:44:58,251 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 53158
+2025-09-04 06:44:58,252 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 53164
+2025-09-04 06:44:58,261 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 29.45ms
+2025-09-04 06:44:58,272 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 30.57ms
+2025-09-04 06:44:58,274 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 23.04ms
+2025-09-04 06:44:58,275 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 23.33ms
+2025-09-04 06:45:11,905 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 53168
+2025-09-04 06:45:11,913 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.53ms
+2025-09-04 06:45:11,916 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 53168
+2025-09-04 06:45:11,924 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 7.92ms
+2025-09-04 06:45:17,158 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 53178
+2025-09-04 06:45:17,166 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 7.96ms
+2025-09-04 06:45:17,169 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 53178
+2025-09-04 06:45:17,178 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 9.33ms
+2025-09-04 06:45:17,182 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 53178
+2025-09-04 06:45:17,190 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 8.46ms
+2025-09-04 06:45:17,194 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 53178
+2025-09-04 06:45:17,202 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.45ms
+2025-09-04 06:45:19,121 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 53178
+2025-09-04 06:45:19,129 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 44472
+2025-09-04 06:45:19,136 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 14.97ms
+2025-09-04 06:45:19,136 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 7.50ms
+2025-09-04 06:45:19,139 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 53178
+2025-09-04 06:45:19,149 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 44472
+2025-09-04 06:45:19,158 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 19.64ms
+2025-09-04 06:45:19,159 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 10.35ms
+2025-09-04 06:54:13,941 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 53332
+2025-09-04 06:54:13,950 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 53342
+2025-09-04 06:54:13,958 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 17.13ms
+2025-09-04 06:54:13,959 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 8.19ms
+2025-09-04 06:56:23,429 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 45216
+2025-09-04 06:56:23,437 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 45218
+2025-09-04 06:56:23,444 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 15.59ms
+2025-09-04 06:56:23,445 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.19ms
+2025-09-04 06:56:23,448 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 45216
+2025-09-04 06:56:23,456 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 45218
+2025-09-04 06:56:23,464 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 16.35ms
+2025-09-04 06:56:23,465 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.77ms
+2025-09-04 06:56:25,814 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 45218
+2025-09-04 06:56:25,825 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 45216
+2025-09-04 06:56:25,833 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 18.99ms
+2025-09-04 06:56:25,835 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 9.99ms
+2025-09-04 06:56:25,838 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 45218
+2025-09-04 06:56:25,848 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 45216
+2025-09-04 06:56:25,860 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 22.38ms
+2025-09-04 06:56:25,861 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 13.19ms
+2025-09-04 06:57:05,047 - INFO - root - New Request: OPTIONS http://localhost:8000/student_certificates/issue 172.18.0.1 45228
+2025-09-04 06:57:05,047 - INFO - root - Completed: OPTIONS http://localhost:8000/student_certificates/issue - Body:  - Status: 200 - Time: 0.69ms
+2025-09-04 06:57:05,050 - INFO - root - New Request: POST http://localhost:8000/student_certificates/issue 172.18.0.1 45228
+2025-09-04 06:57:05,051 - INFO - main - Issuing student certificate for student: 1
+2025-09-04 06:57:05,061 - INFO - main - Student certificate issued successfully: 1, id: 34
+2025-09-04 06:57:05,062 - INFO - root - Completed: POST http://localhost:8000/student_certificates/issue - Body: {"student_id":1,"certificate_title":"Course Completion","description":"ai course","issued_by":1,"cer... - Status: 200 - Time: 11.84ms
+2025-09-04 06:57:09,578 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 45228
+2025-09-04 06:57:09,588 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 33790
+2025-09-04 06:57:09,595 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 16.95ms
+2025-09-04 06:57:09,596 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.52ms
+2025-09-04 06:57:09,600 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 45228
+2025-09-04 06:57:09,608 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 33790
+2025-09-04 06:57:09,618 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 18.69ms
+2025-09-04 06:57:09,619 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 10.59ms
+2025-09-04 06:57:10,768 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 33790
+2025-09-04 06:57:10,775 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 45228
+2025-09-04 06:57:10,782 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 14.76ms
+2025-09-04 06:57:10,783 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.17ms
+2025-09-04 06:57:10,787 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 33790
+2025-09-04 06:57:10,795 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 45228
+2025-09-04 06:57:10,804 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 17.45ms
+2025-09-04 06:57:10,805 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 9.70ms
+2025-09-04 06:57:18,922 - INFO - root - New Request: GET http://localhost:8000/student_certificates/1 172.18.0.1 54782
+2025-09-04 06:57:18,932 - INFO - root - Completed: GET http://localhost:8000/student_certificates/1 - Body:  - Status: 200 - Time: 10.19ms
+2025-09-04 06:57:46,871 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 54790
+2025-09-04 06:57:46,881 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 10.03ms
+2025-09-04 06:57:46,885 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 54790
+2025-09-04 06:57:46,892 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 7.81ms
+2025-09-04 06:57:46,897 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 54790
+2025-09-04 06:57:46,907 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 9.07ms
+2025-09-04 06:57:46,910 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 54790
+2025-09-04 06:57:46,919 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 9.66ms
+2025-09-04 06:57:48,139 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 54790
+2025-09-04 06:57:48,149 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 10.11ms
+2025-09-04 06:57:48,153 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 54790
+2025-09-04 06:57:48,162 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 9.43ms
+2025-09-04 06:57:50,098 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 54790
+2025-09-04 06:57:50,105 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 43648
+2025-09-04 06:57:50,106 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 43658
+2025-09-04 06:57:50,106 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 43666
+2025-09-04 06:57:50,128 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 30.27ms
+2025-09-04 06:57:50,129 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 23.85ms
+2025-09-04 06:57:50,129 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 23.80ms
+2025-09-04 06:57:50,130 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 23.86ms
+2025-09-04 06:57:50,134 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 54790
+2025-09-04 06:57:50,142 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 43648
+2025-09-04 06:57:50,143 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 43666
+2025-09-04 06:57:50,143 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 43658
+2025-09-04 06:57:50,167 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 33.87ms
+2025-09-04 06:57:50,168 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 26.01ms
+2025-09-04 06:57:50,169 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 25.83ms
+2025-09-04 06:57:50,169 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 25.75ms
+2025-09-04 06:57:51,045 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 43666
+2025-09-04 06:57:51,055 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 9.89ms
+2025-09-04 06:57:51,057 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 43666
+2025-09-04 06:57:51,068 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 43658
+2025-09-04 06:57:51,075 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 17.17ms
+2025-09-04 06:57:51,075 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 7.82ms
+2025-09-04 06:57:51,080 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 43658
+2025-09-04 06:57:51,087 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 7.59ms
+2025-09-04 06:57:52,500 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 43658
+2025-09-04 06:57:52,508 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 43666
+2025-09-04 06:57:52,509 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 43648
+2025-09-04 06:57:52,509 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 54790
+2025-09-04 06:57:52,532 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 32.47ms
+2025-09-04 06:57:52,533 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 25.16ms
+2025-09-04 06:57:52,534 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 25.05ms
+2025-09-04 06:57:52,534 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 24.73ms
+2025-09-04 06:57:52,537 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 43658
+2025-09-04 06:57:52,547 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 43666
+2025-09-04 06:57:52,547 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 43648
+2025-09-04 06:57:52,548 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 54790
+2025-09-04 06:57:52,573 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 36.22ms
+2025-09-04 06:57:52,574 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 27.65ms
+2025-09-04 06:57:52,575 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 27.48ms
+2025-09-04 06:57:52,575 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 27.42ms
+2025-09-04 06:57:53,721 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 54790
+2025-09-04 06:57:53,730 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 9.23ms
+2025-09-04 06:57:53,733 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 54790
+2025-09-04 06:57:53,741 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.19ms
+2025-09-04 06:57:54,755 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 54790
+2025-09-04 06:57:54,756 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 43666
+2025-09-04 06:57:54,771 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 15.86ms
+2025-09-04 06:57:54,771 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 15.87ms
+2025-09-04 06:57:54,775 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 54790
+2025-09-04 06:57:54,784 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 43666
+2025-09-04 06:57:54,793 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 17.93ms
+2025-09-04 06:57:54,793 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 9.19ms
+2025-09-04 06:57:55,884 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 43666
+2025-09-04 06:57:55,891 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 54790
+2025-09-04 06:57:55,900 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 16.06ms
+2025-09-04 06:57:55,901 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 9.13ms
+2025-09-04 06:57:55,903 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 43666
+2025-09-04 06:57:55,913 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 54790
+2025-09-04 06:57:55,922 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 18.96ms
+2025-09-04 06:57:55,923 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 10.32ms
+2025-09-04 06:59:41,370 - INFO - root - New Request: GET http://localhost:8000/docs 172.18.0.1 48814
+2025-09-04 06:59:41,371 - INFO - root - Completed: GET http://localhost:8000/docs - Body:  - Status: 200 - Time: 0.91ms
+2025-09-04 06:59:41,554 - INFO - root - New Request: GET http://localhost:8000/openapi.json 172.18.0.1 48814
+2025-09-04 06:59:41,583 - INFO - root - Completed: GET http://localhost:8000/openapi.json - Body:  - Status: 200 - Time: 29.01ms
+2025-09-04 07:08:33,476 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 38136
+2025-09-04 07:08:33,490 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 13.96ms
+2025-09-04 07:08:33,498 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 38136
+2025-09-04 07:08:33,509 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 11.43ms
+2025-09-04 07:21:16,067 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 59478
+2025-09-04 07:21:16,076 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 59484
+2025-09-04 07:21:16,083 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 15.52ms
+2025-09-04 07:21:16,084 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.16ms
+2025-09-04 07:21:16,086 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 59478
+2025-09-04 07:21:16,094 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 59484
+2025-09-04 07:21:16,102 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 16.22ms
+2025-09-04 07:21:16,103 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.58ms
+2025-09-04 07:22:17,216 - INFO - root - New Request: OPTIONS http://localhost:8000/leaderboard/add 172.18.0.1 56374
+2025-09-04 07:22:17,216 - INFO - root - Completed: OPTIONS http://localhost:8000/leaderboard/add - Body:  - Status: 200 - Time: 0.75ms
+2025-09-04 07:22:17,219 - INFO - root - New Request: POST http://localhost:8000/leaderboard/add 172.18.0.1 56374
+2025-09-04 07:22:17,225 - INFO - root - Completed: POST http://localhost:8000/leaderboard/add - Body: {"student_id":1,"activity_type":"coding challange","points":4,"achievement_date":"2025-09-04T07:22:1... - Status: 422 - Time: 5.31ms
+2025-09-04 07:25:17,318 - INFO - root - New Request: POST http://localhost:8000/leaderboard/add 172.18.0.1 53954
+2025-09-04 07:25:17,319 - INFO - main - Adding leaderboard entry for student: 1, metric: coding challange
+2025-09-04 07:25:17,329 - ERROR - main - Error adding leaderboard entry for student 1: integer out of range
+
+2025-09-04 07:25:17,330 - INFO - root - Completed: POST http://localhost:8000/leaderboard/add - Body: {"id":1756970717004,"student_id":1,"metric":"coding challange","score":6,"context":{"description":"m... - Status: 400 - Time: 12.29ms
+2025-09-04 07:34:02,191 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 53724
+2025-09-04 07:34:02,220 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 28.93ms
+2025-09-04 07:34:02,226 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 53724
+2025-09-04 07:34:02,235 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 9.83ms
+2025-09-04 07:34:19,177 - INFO - root - New Request: OPTIONS http://localhost:8000/leaderboard/add 172.18.0.1 53726
+2025-09-04 07:34:19,177 - INFO - root - Completed: OPTIONS http://localhost:8000/leaderboard/add - Body:  - Status: 200 - Time: 0.67ms
+2025-09-04 07:34:19,180 - INFO - root - New Request: POST http://localhost:8000/leaderboard/add 172.18.0.1 53726
+2025-09-04 07:34:19,181 - INFO - main - Adding leaderboard entry for student: 1, metric: coding challange
+2025-09-04 07:34:19,190 - ERROR - main - Error adding leaderboard entry for student 1: integer out of range
+
+2025-09-04 07:34:19,191 - INFO - root - Completed: POST http://localhost:8000/leaderboard/add - Body: {"id":1756971259175,"student_id":1,"metric":"coding challange","score":7,"context":{"description":"m... - Status: 400 - Time: 10.48ms
+2025-09-04 07:35:55,344 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 58534
+2025-09-04 07:35:55,356 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 12.69ms
+2025-09-04 07:35:55,364 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 58534
+2025-09-04 07:35:55,374 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 10.02ms
+2025-09-04 07:36:11,076 - INFO - root - New Request: POST http://localhost:8000/leaderboard/add 172.18.0.1 58542
+2025-09-04 07:36:11,077 - INFO - main - Adding leaderboard entry for student: 1, metric: coding challange
+2025-09-04 07:36:11,092 - INFO - main - Leaderboard entry added successfully: 1, id: 789086
+2025-09-04 07:36:11,093 - INFO - root - Completed: POST http://localhost:8000/leaderboard/add - Body: {"id":789086,"student_id":1,"metric":"coding challange","score":0,"context":{"description":"machine ... - Status: 200 - Time: 17.22ms
+2025-09-04 07:36:21,866 - INFO - root - New Request: GET http://localhost:8000/leaderboard/1 172.18.0.1 48976
+2025-09-04 07:36:21,873 - INFO - root - Completed: GET http://localhost:8000/leaderboard/1 - Body:  - Status: 404 - Time: 7.26ms
+2025-09-04 07:39:25,554 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 55434
+2025-09-04 07:39:25,563 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 55442
+2025-09-04 07:39:25,573 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 55456
+2025-09-04 07:39:25,573 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 19.32ms
+2025-09-04 07:39:25,580 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 55468
+2025-09-04 07:39:25,588 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 24.71ms
+2025-09-04 07:39:25,589 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 16.45ms
+2025-09-04 07:39:25,590 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 9.82ms
+2025-09-04 07:39:25,591 - INFO - root - New Request: GET http://localhost:8000/admin/students/departments 172.18.0.1 55434
+2025-09-04 07:39:25,601 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 55442
+2025-09-04 07:39:25,609 - INFO - root - New Request: GET http://localhost:8000/admin/students/batch-years 172.18.0.1 55456
+2025-09-04 07:39:25,610 - INFO - root - Completed: GET http://localhost:8000/admin/students/departments - Body:  - Status: 200 - Time: 18.89ms
+2025-09-04 07:39:25,618 - INFO - root - New Request: GET http://localhost:8000/admin/students/statuses 172.18.0.1 55468
+2025-09-04 07:39:25,628 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 26.75ms
+2025-09-04 07:39:25,629 - INFO - root - Completed: GET http://localhost:8000/admin/students/batch-years - Body:  - Status: 200 - Time: 19.69ms
+2025-09-04 07:39:25,630 - INFO - root - Completed: GET http://localhost:8000/admin/students/statuses - Body:  - Status: 200 - Time: 11.71ms
+2025-09-04 07:39:31,079 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 55480
+2025-09-04 07:39:31,088 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.24ms
+2025-09-04 07:39:31,091 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 55480
+2025-09-04 07:39:31,103 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 12.63ms
+2025-09-04 07:39:32,243 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 55480
+2025-09-04 07:39:32,251 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 55492
+2025-09-04 07:39:32,259 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 15.89ms
+2025-09-04 07:39:32,260 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.97ms
+2025-09-04 07:39:32,263 - INFO - root - New Request: GET http://localhost:8000/admin/events/all 172.18.0.1 55480
+2025-09-04 07:39:32,272 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 55492
+2025-09-04 07:39:32,282 - INFO - root - Completed: GET http://localhost:8000/admin/events/all - Body:  - Status: 200 - Time: 18.87ms
+2025-09-04 07:39:32,283 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 11.01ms
+2025-09-04 07:39:33,186 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 55492
+2025-09-04 07:39:33,197 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 55480
+2025-09-04 07:39:33,206 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 20.50ms
+2025-09-04 07:39:33,207 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 9.91ms
+2025-09-04 07:39:33,211 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 55492
+2025-09-04 07:39:33,221 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 55480
+2025-09-04 07:39:33,232 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 21.20ms
+2025-09-04 07:39:33,233 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 11.67ms
+2025-09-04 07:40:04,800 - INFO - root - New Request: POST http://localhost:8000/leaderboard/add 172.18.0.1 50448
+2025-09-04 07:40:04,801 - INFO - main - Adding leaderboard entry for student: 2, metric: coding challange
+2025-09-04 07:40:04,812 - INFO - main - Leaderboard entry added successfully: 2, id: 1
+2025-09-04 07:40:04,813 - INFO - root - Completed: POST http://localhost:8000/leaderboard/add - Body: {"id":1,"student_id":2,"metric":"coding challange","score":0,"context":{"description":"ai"}} - Status: 200 - Time: 12.90ms
+2025-09-04 07:40:13,797 - INFO - root - New Request: GET http://localhost:8000/leaderboard/2 172.18.0.1 50452
+2025-09-04 07:40:13,804 - INFO - root - Completed: GET http://localhost:8000/leaderboard/2 - Body:  - Status: 404 - Time: 7.19ms
+2025-09-04 07:40:22,031 - INFO - root - New Request: GET http://localhost:8000/leaderboard/1 172.18.0.1 43412
+2025-09-04 07:40:22,043 - INFO - root - Completed: GET http://localhost:8000/leaderboard/1 - Body:  - Status: 200 - Time: 12.00ms
+2025-09-04 07:40:22,927 - INFO - root - New Request: GET http://localhost:8000/leaderboard/1 172.18.0.1 43412
+2025-09-04 07:40:22,936 - INFO - root - Completed: GET http://localhost:8000/leaderboard/1 - Body:  - Status: 200 - Time: 8.64ms
+2025-09-04 07:40:23,380 - INFO - root - New Request: GET http://localhost:8000/leaderboard/1 172.18.0.1 43412
+2025-09-04 07:40:23,387 - INFO - root - Completed: GET http://localhost:8000/leaderboard/1 - Body:  - Status: 200 - Time: 6.93ms
+2025-09-04 07:40:23,558 - INFO - root - New Request: GET http://localhost:8000/leaderboard/1 172.18.0.1 43412
+2025-09-04 07:40:23,566 - INFO - root - Completed: GET http://localhost:8000/leaderboard/1 - Body:  - Status: 200 - Time: 7.44ms
+2025-09-04 07:40:23,786 - INFO - root - New Request: GET http://localhost:8000/leaderboard/1 172.18.0.1 43412
+2025-09-04 07:40:23,793 - INFO - root - Completed: GET http://localhost:8000/leaderboard/1 - Body:  - Status: 200 - Time: 7.06ms
+2025-09-04 07:40:24,875 - INFO - root - New Request: GET http://localhost:8000/leaderboard/1 172.18.0.1 43412
+2025-09-04 07:40:24,883 - INFO - root - Completed: GET http://localhost:8000/leaderboard/1 - Body:  - Status: 200 - Time: 7.84ms
+2025-09-04 07:40:25,131 - INFO - root - New Request: GET http://localhost:8000/leaderboard/1 172.18.0.1 43412
+2025-09-04 07:40:25,138 - INFO - root - Completed: GET http://localhost:8000/leaderboard/1 - Body:  - Status: 200 - Time: 7.07ms
+2025-09-04 07:40:34,288 - INFO - root - New Request: GET http://localhost:8000/leaderboard/2 172.18.0.1 43424
+2025-09-04 07:40:34,297 - INFO - root - Completed: GET http://localhost:8000/leaderboard/2 - Body:  - Status: 404 - Time: 8.23ms
+2025-09-04 07:40:37,873 - INFO - root - New Request: GET http://localhost:8000/leaderboard/2 172.18.0.1 43424
+2025-09-04 07:40:37,881 - INFO - root - Completed: GET http://localhost:8000/leaderboard/2 - Body:  - Status: 404 - Time: 8.61ms
+2025-09-04 07:40:38,738 - INFO - root - New Request: GET http://localhost:8000/leaderboard/2 172.18.0.1 43424
+2025-09-04 07:40:38,746 - INFO - root - Completed: GET http://localhost:8000/leaderboard/2 - Body:  - Status: 404 - Time: 7.37ms
+2025-09-04 07:40:38,931 - INFO - root - New Request: GET http://localhost:8000/leaderboard/2 172.18.0.1 43424
+2025-09-04 07:40:38,939 - INFO - root - Completed: GET http://localhost:8000/leaderboard/2 - Body:  - Status: 404 - Time: 8.71ms
+2025-09-04 07:40:39,158 - INFO - root - New Request: GET http://localhost:8000/leaderboard/2 172.18.0.1 43424
+2025-09-04 07:40:39,164 - INFO - root - Completed: GET http://localhost:8000/leaderboard/2 - Body:  - Status: 404 - Time: 6.56ms
+2025-09-04 07:44:40,154 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 36010
+2025-09-04 07:44:40,165 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 11.10ms
+2025-09-04 07:44:40,170 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 36010
+2025-09-04 07:44:40,178 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 8.08ms
+2025-09-04 07:44:48,625 - INFO - root - New Request: GET http://localhost:8000/leaderboard/1 172.18.0.1 36022
+2025-09-04 07:44:48,634 - INFO - root - Completed: GET http://localhost:8000/leaderboard/1 - Body:  - Status: 200 - Time: 8.68ms
+2025-09-04 07:44:52,906 - INFO - root - New Request: GET http://localhost:8000/leaderboard/2 172.18.0.1 36022
+2025-09-04 07:44:52,913 - INFO - root - Completed: GET http://localhost:8000/leaderboard/2 - Body:  - Status: 404 - Time: 6.79ms
+2025-09-04 07:45:02,217 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 47158
+2025-09-04 07:45:02,225 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47170
+2025-09-04 07:45:02,232 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 14.85ms
+2025-09-04 07:45:02,233 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.00ms
+2025-09-04 07:45:02,235 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 47158
+2025-09-04 07:45:02,244 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 47170
+2025-09-04 07:45:02,253 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 18.57ms
+2025-09-04 07:45:02,254 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 9.57ms
+2025-09-04 07:45:09,331 - INFO - root - New Request: GET http://localhost:8000/leaderboard/0 172.18.0.1 47174
+2025-09-04 07:45:09,339 - INFO - root - Completed: GET http://localhost:8000/leaderboard/0 - Body:  - Status: 404 - Time: 7.50ms
+2025-09-04 07:45:15,827 - INFO - root - New Request: GET http://localhost:8000/leaderboard/1 172.18.0.1 51864
+2025-09-04 07:45:15,834 - INFO - root - Completed: GET http://localhost:8000/leaderboard/1 - Body:  - Status: 200 - Time: 6.94ms
+2025-09-04 07:45:16,191 - INFO - root - New Request: GET http://localhost:8000/leaderboard/1 172.18.0.1 51864
+2025-09-04 07:45:16,200 - INFO - root - Completed: GET http://localhost:8000/leaderboard/1 - Body:  - Status: 200 - Time: 9.83ms
+2025-09-04 07:45:30,476 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 51878
+2025-09-04 07:45:30,484 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 8.62ms
+2025-09-04 07:45:30,487 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 51878
+2025-09-04 07:45:30,496 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 8.61ms
+2025-09-04 07:45:30,499 - INFO - root - New Request: GET http://localhost:8000/admin/students/all 172.18.0.1 51878
+2025-09-04 07:45:30,508 - INFO - root - Completed: GET http://localhost:8000/admin/students/all - Body:  - Status: 200 - Time: 9.17ms
+2025-09-04 07:45:30,512 - INFO - root - New Request: GET http://localhost:8000/admin/mentors/all 172.18.0.1 51878
+2025-09-04 07:45:30,521 - INFO - root - Completed: GET http://localhost:8000/admin/mentors/all - Body:  - Status: 200 - Time: 9.22ms
+2025-09-08 09:16:16,010 - INFO - root - New Request: GET http://localhost:8000/ 172.18.0.1 51980
+2025-09-08 09:16:16,012 - INFO - root - Completed: GET http://localhost:8000/ - Body:  - Status: 200 - Time: 1.57ms
+2025-09-08 09:16:56,477 - INFO - root - New Request: GET http://localhost:8000/admin/statistics 172.18.0.1 42826
+2025-09-08 09:16:56,630 - INFO - root - Completed: GET http://localhost:8000/admin/statistics - Body:  - Status: 200 - Time: 152.91ms
+2025-09-08 09:16:56,637 - INFO - root - New Request: GET http://localhost:8000/admin/database-info 172.18.0.1 42826
+2025-09-08 09:16:56,649 - INFO - root - Completed: GET http://localhost:8000/admin/database-info - Body:  - Status: 200 - Time: 12.02ms

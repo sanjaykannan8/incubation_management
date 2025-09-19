@@ -1,0 +1,574 @@
+openapi: 3.1.0
+info:
+  title: FastAPI
+  version: 0.1.0
+paths:
+  /:
+    get:
+      summary: Root
+      operationId: root__get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /students/register:
+    post:
+      summary: Register Student
+      operationId: register_student_students_register_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Student'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /students/{student_id}:
+    get:
+      summary: Get Student
+      operationId: get_student_students__student_id__get
+      parameters:
+      - name: student_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: Student Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /events/create:
+    post:
+      summary: Create Event
+      operationId: create_event_events_create_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Event'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /events/{event_id}:
+    get:
+      summary: Get Event
+      operationId: get_event_events__event_id__get
+      parameters:
+      - name: event_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: Event Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /mentors/register:
+    post:
+      summary: Register Mentor
+      operationId: register_mentor_mentors_register_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Mentor'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /mentors/{mentor_id}:
+    get:
+      summary: Get Mentor
+      operationId: get_mentor_mentors__mentor_id__get
+      parameters:
+      - name: mentor_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: Mentor Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /student_certificates/issue:
+    post:
+      summary: Issue Student Certificate
+      operationId: issue_student_certificate_student_certificates_issue_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StudentCertificate'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /student_certificates/{student_certificate_id}:
+    get:
+      summary: Get Student Certificate
+      operationId: get_student_certificate_student_certificates__student_certificate_id__get
+      parameters:
+      - name: student_certificate_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: Student Certificate Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /leaderboard/add:
+    post:
+      summary: Add Leaderboard Entry
+      operationId: add_leaderboard_entry_leaderboard_add_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LeaderboardEntry'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /leaderboard/{entry_id}:
+    get:
+      summary: Get Leaderboard Entry
+      operationId: get_leaderboard_entry_leaderboard__entry_id__get
+      parameters:
+      - name: entry_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: Entry Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /alumni/register:
+    post:
+      summary: Register Alumni
+      operationId: register_alumni_alumni_register_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Alumni'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /alumni/{alumni_id}:
+    get:
+      summary: Get Alumni
+      operationId: get_alumni_alumni__alumni_id__get
+      parameters:
+      - name: alumni_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: Alumni Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /feedbacks/add:
+    post:
+      summary: Add Feedback
+      operationId: add_feedback_feedbacks_add_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Feedback'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /feedbacks/{feedback_id}:
+    get:
+      summary: Get Feedback
+      operationId: get_feedback_feedbacks__feedback_id__get
+      parameters:
+      - name: feedback_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: Feedback Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /favicon.ico:
+    get:
+      summary: Favicon
+      operationId: favicon_favicon_ico_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+components:
+  schemas:
+    Alumni:
+      properties:
+        id:
+          type: integer
+          title: Id
+        student_id:
+          type: integer
+          title: Student Id
+        graduation_year:
+          type: integer
+          title: Graduation Year
+        current_status:
+          type: string
+          title: Current Status
+      type: object
+      required:
+      - id
+      - student_id
+      - graduation_year
+      title: Alumni
+    Event:
+      properties:
+        id:
+          type: integer
+          title: Id
+        title:
+          type: string
+          title: Title
+        description:
+          type: string
+          title: Description
+        starts_at:
+          type: string
+          title: Starts At
+        ends_at:
+          type: string
+          title: Ends At
+        location:
+          type: string
+          title: Location
+        created_by:
+          type: integer
+          title: Created By
+      type: object
+      required:
+      - id
+      - title
+      - created_by
+      title: Event
+    Feedback:
+      properties:
+        id:
+          type: integer
+          title: Id
+        from_student:
+          type: integer
+          title: From Student
+        from_mentor:
+          type: integer
+          title: From Mentor
+        target_type:
+          type: string
+          title: Target Type
+        target_id:
+          type: integer
+          title: Target Id
+        rating:
+          type: integer
+          title: Rating
+        comment:
+          type: string
+          title: Comment
+        metadata:
+          additionalProperties: true
+          type: object
+          title: Metadata
+      type: object
+      required:
+      - id
+      - target_type
+      title: Feedback
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    LeaderboardEntry:
+      properties:
+        id:
+          type: integer
+          title: Id
+        student_id:
+          type: integer
+          title: Student Id
+        metric:
+          type: string
+          title: Metric
+        score:
+          type: number
+          title: Score
+          default: 0
+        context:
+          additionalProperties: true
+          type: object
+          title: Context
+      type: object
+      required:
+      - id
+      - student_id
+      - metric
+      title: LeaderboardEntry
+    Mentor:
+      properties:
+        id:
+          type: integer
+          title: Id
+        email:
+          type: string
+          title: Email
+        password_hash:
+          type: string
+          title: Password Hash
+        full_name:
+          type: string
+          title: Full Name
+        phone:
+          type: string
+          title: Phone
+        title:
+          type: string
+          title: Title
+        expertise:
+          items:
+            type: string
+          type: array
+          title: Expertise
+        available:
+          type: boolean
+          title: Available
+          default: true
+      type: object
+      required:
+      - id
+      - email
+      - password_hash
+      - full_name
+      - phone
+      title: Mentor
+    Student:
+      properties:
+        id:
+          type: integer
+          title: Id
+        email:
+          type: string
+          title: Email
+        password_hash:
+          type: string
+          title: Password Hash
+        full_name:
+          type: string
+          title: Full Name
+        phone:
+          type: string
+          title: Phone
+        batch_year:
+          type: integer
+          title: Batch Year
+        department:
+          type: string
+          title: Department
+      type: object
+      required:
+      - id
+      - email
+      - password_hash
+      - full_name
+      - phone
+      title: Student
+    StudentCertificate:
+      properties:
+        id:
+          type: integer
+          title: Id
+        student_id:
+          type: integer
+          title: Student Id
+        certificate_title:
+          type: string
+          title: Certificate Title
+        description:
+          type: string
+          title: Description
+        issued_by:
+          type: integer
+          title: Issued By
+        certificate_data:
+          additionalProperties: true
+          type: object
+          title: Certificate Data
+      type: object
+      required:
+      - id
+      - student_id
+      - certificate_title
+      - issued_by
+      title: StudentCertificate
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
