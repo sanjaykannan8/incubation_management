@@ -1,4 +1,12 @@
-name: CI/CD Pipeline for EKS Services
+name: CI/CD Pipeline for EKS Ser    # 🐳 Build & push COE API image
+    - name: Build and push COE API
+      run: |
+        if [ ! -f ./COE_Api/Dockerfile ]; then
+          echo "Dockerfile not found in COE_Api directory"
+          exit 1
+        fi
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/coe_api:latest ./COE_Api
+        docker push ${{ secrets.DOCKER_USERNAME }}/coe_api:latest
 
 on:
   push:
@@ -20,28 +28,38 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    # 🐳 Build & push COE API image
+    # � Debug: List repository structure
+    - name: List repository structure
+      run: |
+        echo "Repository root contents:"
+        ls -la
+        echo "COE_Api contents:"
+        ls -la COE_Api/ || echo "COE_Api directory not found"
+        echo "Incubation_Backend contents:"
+        ls -la Incubation_Backend/ || echo "Incubation_Backend directory not found"
+
+    # �🐳 Build & push COE API image
     - name: Build and push COE API
       run: |
-        cd COE_Api && docker build -t ${{ secrets.DOCKER_USERNAME }}/coe_api:latest .
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/coe_api:latest ./COE_Api
         docker push ${{ secrets.DOCKER_USERNAME }}/coe_api:latest
 
     # 🐳 Build & push Incubation Backend image
     - name: Build and push Incubation Backend
       run: |
-        cd Incubation_Backend && docker build -t ${{ secrets.DOCKER_USERNAME }}/coe_incubation_api:latest .
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/coe_incubation_api:latest ./Incubation_Backend
         docker push ${{ secrets.DOCKER_USERNAME }}/coe_incubation_api:latest
 
     # 🐳 Build & push Project Management Service
     - name: Build and push Project Management Service
       run: |
-        cd Project-Management-ims && docker build -t ${{ secrets.DOCKER_USERNAME }}/project_api:latest .
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/project_api:latest ./Project-Management-ims
         docker push ${{ secrets.DOCKER_USERNAME }}/project_api:latest
 
     # 🐳 Build & push Student Service
     - name: Build and push Student Service
       run: |
-        cd student_management/backend && docker build -t ${{ secrets.DOCKER_USERNAME }}/student_api:latest .
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/student_api:latest ./student_management/backend
         docker push ${{ secrets.DOCKER_USERNAME }}/student_api:latest
 
     # ☁️ AWS credentials
