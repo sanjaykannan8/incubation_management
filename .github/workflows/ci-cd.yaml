@@ -45,37 +45,3 @@ jobs:
       run: |
         docker build -t ${{ secrets.DOCKER_USERNAME }}/student_api:latest ./student_management/backend
         docker push ${{ secrets.DOCKER_USERNAME }}/student_api:latest
-
-    # ☁️ Configure AWS credentials
-    - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v4
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ${{ secrets.AWS_REGION }}
-
-    # 🔗 Update kubeconfig for EKS
-    - name: Update kubeconfig
-      run: aws eks update-kubeconfig --name ${{ secrets.EKS_CLUSTER_NAME }}
-
-    # 🚀 Deploy services to Kubernetes
-    - name: Deploy COE Service (API + Backend)
-      run: kubectl apply -f kubernetes/coe.yaml
-
-    - name: Deploy Project Service
-      run: kubectl apply -f kubernetes/project.yaml
-
-    - name: Deploy Student Service
-      run: kubectl apply -f kubernetes/student.yaml
-
-    # ✅ Verify deployments
-    - name: Wait for deployments to be ready
-      run: |
-        kubectl rollout status deployment/coe-api-deployment --timeout=300s
-        kubectl rollout status deployment/project-api-deployment --timeout=300s
-        kubectl rollout status deployment/student-api-deployment --timeout=300s
-
-    - name: Get deployment status
-      run: |
-        kubectl get pods
-        kubectl get services
