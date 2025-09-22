@@ -1,0 +1,48 @@
+# ===============================================
+# Simple Dev Configuration
+# ===============================================
+
+# Basic settings
+cluster_name = "my-dev-cluster"
+aws_region   = "ap-south-1"
+
+# Cost-effective for dev
+node_instance_type = "t3.small"
+node_count         = 1
+
+# ArgoCD for GitOps
+install_argocd        = true
+argocd_admin_password = "dev-password-123"
+
+# Your Git repository configuration
+git_repo_url    = "https://github.com/priyanka0572/incubation_management.git"
+git_repo_branch = "main"
+git_repo_path   = "incubation_management/manifest"
+
+# For private repository access (uncomment and configure)
+# git_username = "priyanka0572"
+# git_password = "your-personal-access-token"
+
+# Create default ArgoCD application
+create_default_app = true
+
+# ===============================================
+# Optional Helm Charts
+# ===============================================
+
+# NGINX Ingress (for web traffic)
+install_nginx_ingress = false
+
+# Metrics Server (for kubectl top and autoscaling)
+install_metrics_server = false
+
+# Monitoring Stack (Prometheus + Grafana)
+install_monitoring = false
+grafana_admin_password = "secure-grafana-password"
+
+# ===============================================
+# Instance Types for Reference
+# ===============================================
+# t3.micro  - 2 vCPU, 1 GB RAM  - Very cheap
+# t3.small  - 2 vCPU, 2 GB RAM  - Good for dev
+# t3.medium - 2 vCPU, 4 GB RAM  - More resources
